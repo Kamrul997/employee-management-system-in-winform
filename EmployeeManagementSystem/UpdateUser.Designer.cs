@@ -31,7 +31,7 @@
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
-            this.btnUpdateSubmitUser = new System.Windows.Forms.Button();
+            this.btnUpdateUser = new System.Windows.Forms.Button();
             this.radioButtonUpdateFemaleUser = new System.Windows.Forms.RadioButton();
             this.radioButtonUpdateMaleUser = new System.Windows.Forms.RadioButton();
             this.comboBoxUpdatePermission = new System.Windows.Forms.ComboBox();
@@ -92,14 +92,14 @@
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
             // 
-            // btnUpdateSubmitUser
+            // btnUpdateUser
             // 
-            this.btnUpdateSubmitUser.Location = new System.Drawing.Point(527, 357);
-            this.btnUpdateSubmitUser.Name = "btnUpdateSubmitUser";
-            this.btnUpdateSubmitUser.Size = new System.Drawing.Size(75, 23);
-            this.btnUpdateSubmitUser.TabIndex = 57;
-            this.btnUpdateSubmitUser.Text = "Update";
-            this.btnUpdateSubmitUser.UseVisualStyleBackColor = true;
+            this.btnUpdateUser.Location = new System.Drawing.Point(527, 357);
+            this.btnUpdateUser.Name = "btnUpdateUser";
+            this.btnUpdateUser.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdateUser.TabIndex = 57;
+            this.btnUpdateUser.Text = "Update";
+            this.btnUpdateUser.UseVisualStyleBackColor = true;
             // 
             // radioButtonUpdateFemaleUser
             // 
@@ -369,7 +369,7 @@
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.btnUpdateSubmitUser);
+            this.Controls.Add(this.btnUpdateUser);
             this.Controls.Add(this.radioButtonUpdateFemaleUser);
             this.Controls.Add(this.radioButtonUpdateMaleUser);
             this.Controls.Add(this.comboBoxUpdatePermission);
@@ -413,7 +413,7 @@
         private Button btnLogOut;
         private Button btnRefresh;
         private Button btnBack;
-        private Button btnUpdateSubmitUser;
+        private Button btnUpdateUser;
         private RadioButton radioButtonUpdateFemaleUser;
         private RadioButton radioButtonUpdateMaleUser;
         private ComboBox comboBoxUpdatePermission;
