@@ -32,7 +32,7 @@
             this.dataGridViewEmployee = new System.Windows.Forms.DataGridView();
             this.btnAddEmployee = new System.Windows.Forms.Button();
             this.btnDeleteEmployee = new System.Windows.Forms.Button();
-            this.btnHome = new System.Windows.Forms.Button();
+            this.btnHomeEmployee = new System.Windows.Forms.Button();
             this.btnDetailsEmployee = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmployee)).BeginInit();
@@ -75,14 +75,14 @@
             this.btnDeleteEmployee.Text = "Delete";
             this.btnDeleteEmployee.UseVisualStyleBackColor = true;
             // 
-            // btnHome
+            // btnHomeEmployee
             // 
-            this.btnHome.Location = new System.Drawing.Point(552, 345);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(75, 23);
-            this.btnHome.TabIndex = 4;
-            this.btnHome.Text = "Home";
-            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHomeEmployee.Location = new System.Drawing.Point(552, 345);
+            this.btnHomeEmployee.Name = "btnHomeEmployee";
+            this.btnHomeEmployee.Size = new System.Drawing.Size(75, 23);
+            this.btnHomeEmployee.TabIndex = 4;
+            this.btnHomeEmployee.Text = "Home";
+            this.btnHomeEmployee.UseVisualStyleBackColor = true;
             // 
             // btnDetailsEmployee
             // 
@@ -108,7 +108,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(720, 392);
             this.Controls.Add(this.btnLogOut);
-            this.Controls.Add(this.btnHome);
+            this.Controls.Add(this.btnHomeEmployee);
             this.Controls.Add(this.btnDetailsEmployee);
             this.Controls.Add(this.btnDeleteEmployee);
             this.Controls.Add(this.btnAddEmployee);
@@ -128,7 +128,7 @@
         private DataGridView dataGridViewEmployee;
         private Button btnAddEmployee;
         private Button btnDeleteEmployee;
-        private Button btnHome;
+        private Button btnHomeEmployee;
         private Button btnDetailsEmployee;
         private Button btnLogOut;
     }

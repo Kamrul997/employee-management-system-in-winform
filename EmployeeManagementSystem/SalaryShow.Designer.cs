@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.btnLogOut = new System.Windows.Forms.Button();
-            this.btnHome = new System.Windows.Forms.Button();
+            this.btnHomeSalary = new System.Windows.Forms.Button();
             this.btnSalaryEdit = new System.Windows.Forms.Button();
             this.btnDeleteSalary = new System.Windows.Forms.Button();
-            this.btnAddEmployee = new System.Windows.Forms.Button();
+            this.btnAddSalary = new System.Windows.Forms.Button();
             this.dataGridViewSalary = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSalary)).BeginInit();
@@ -47,14 +47,15 @@
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = true;
             // 
-            // btnHome
+            // btnHomeSalary
             // 
-            this.btnHome.Location = new System.Drawing.Point(554, 357);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(75, 23);
-            this.btnHome.TabIndex = 11;
-            this.btnHome.Text = "Home";
-            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHomeSalary.Location = new System.Drawing.Point(554, 357);
+            this.btnHomeSalary.Name = "btnHomeSalary";
+            this.btnHomeSalary.Size = new System.Drawing.Size(75, 23);
+            this.btnHomeSalary.TabIndex = 11;
+            this.btnHomeSalary.Text = "Home";
+            this.btnHomeSalary.UseVisualStyleBackColor = true;
+            this.btnHomeSalary.Click += new System.EventHandler(this.btnHomeSalary_Click);
             // 
             // btnSalaryEdit
             // 
@@ -64,6 +65,7 @@
             this.btnSalaryEdit.TabIndex = 9;
             this.btnSalaryEdit.Text = "Edit";
             this.btnSalaryEdit.UseVisualStyleBackColor = true;
+            this.btnSalaryEdit.Click += new System.EventHandler(this.btnSalaryEdit_Click);
             // 
             // btnDeleteSalary
             // 
@@ -74,14 +76,15 @@
             this.btnDeleteSalary.Text = "Delete";
             this.btnDeleteSalary.UseVisualStyleBackColor = true;
             // 
-            // btnAddEmployee
+            // btnAddSalary
             // 
-            this.btnAddEmployee.Location = new System.Drawing.Point(14, 357);
-            this.btnAddEmployee.Name = "btnAddEmployee";
-            this.btnAddEmployee.Size = new System.Drawing.Size(128, 23);
-            this.btnAddEmployee.TabIndex = 8;
-            this.btnAddEmployee.Text = "Add New Salary";
-            this.btnAddEmployee.UseVisualStyleBackColor = true;
+            this.btnAddSalary.Location = new System.Drawing.Point(14, 357);
+            this.btnAddSalary.Name = "btnAddSalary";
+            this.btnAddSalary.Size = new System.Drawing.Size(128, 23);
+            this.btnAddSalary.TabIndex = 8;
+            this.btnAddSalary.Text = "Add New Salary";
+            this.btnAddSalary.UseVisualStyleBackColor = true;
+            this.btnAddSalary.Click += new System.EventHandler(this.btnAddSalary_Click);
             // 
             // dataGridViewSalary
             // 
@@ -102,19 +105,19 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Salary";
             // 
-            // Salary
+            // SalaryShow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(720, 392);
             this.Controls.Add(this.btnLogOut);
-            this.Controls.Add(this.btnHome);
+            this.Controls.Add(this.btnHomeSalary);
             this.Controls.Add(this.btnSalaryEdit);
             this.Controls.Add(this.btnDeleteSalary);
-            this.Controls.Add(this.btnAddEmployee);
+            this.Controls.Add(this.btnAddSalary);
             this.Controls.Add(this.dataGridViewSalary);
             this.Controls.Add(this.label1);
-            this.Name = "Salary";
+            this.Name = "SalaryShow";
             this.Text = "Salary";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSalary)).EndInit();
             this.ResumeLayout(false);
@@ -125,10 +128,10 @@
         #endregion
 
         private Button btnLogOut;
-        private Button btnHome;
+        private Button btnHomeSalary;
         private Button btnSalaryEdit;
         private Button btnDeleteSalary;
-        private Button btnAddEmployee;
+        private Button btnAddSalary;
         private DataGridView dataGridViewSalary;
         private Label label1;
     }

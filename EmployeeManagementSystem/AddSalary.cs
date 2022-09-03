@@ -16,5 +16,12 @@ namespace EmployeeManagementSystem.Salary
         {
             InitializeComponent();
         }
+
+        private void btnBackAddSalary_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            SalaryShow salaryShow2 = new SalaryShow();
+            salaryShow2.Show();
+        }
     }
 }

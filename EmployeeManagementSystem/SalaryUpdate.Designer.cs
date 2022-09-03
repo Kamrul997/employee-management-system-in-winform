@@ -39,7 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
+            this.btnBackSalaryUpdate = new System.Windows.Forms.Button();
             this.btnUpdateEmployee = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.SalaryID = new System.Windows.Forms.TextBox();
@@ -138,14 +138,15 @@
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
             // 
-            // btnBack
+            // btnBackSalaryUpdate
             // 
-            this.btnBack.Location = new System.Drawing.Point(18, 348);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
-            this.btnBack.TabIndex = 22;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBackSalaryUpdate.Location = new System.Drawing.Point(18, 348);
+            this.btnBackSalaryUpdate.Name = "btnBackSalaryUpdate";
+            this.btnBackSalaryUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnBackSalaryUpdate.TabIndex = 22;
+            this.btnBackSalaryUpdate.Text = "Back";
+            this.btnBackSalaryUpdate.UseVisualStyleBackColor = true;
+            this.btnBackSalaryUpdate.Click += new System.EventHandler(this.btnBackSalaryUpdate_Click);
             // 
             // btnUpdateEmployee
             // 
@@ -190,7 +191,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btnBackSalaryUpdate);
             this.Controls.Add(this.btnUpdateEmployee);
             this.Name = "SalaryUpdate";
             this.Text = "SalaryUpdate";
@@ -212,7 +213,7 @@
         private Label label1;
         private Button btnLogOut;
         private Button btnRefresh;
-        private Button btnBack;
+        private Button btnBackSalaryUpdate;
         private Button btnUpdateEmployee;
         private Label label3;
         private TextBox SalaryID;

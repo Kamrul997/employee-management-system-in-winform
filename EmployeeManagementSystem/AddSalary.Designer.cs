@@ -30,7 +30,7 @@
         {
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
+            this.btnBackAddSalary = new System.Windows.Forms.Button();
             this.btnSubmitEmployee = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SalayAmount = new System.Windows.Forms.TextBox();
@@ -61,14 +61,15 @@
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
             // 
-            // btnBack
+            // btnBackAddSalary
             // 
-            this.btnBack.Location = new System.Drawing.Point(15, 357);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
-            this.btnBack.TabIndex = 9;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBackAddSalary.Location = new System.Drawing.Point(15, 357);
+            this.btnBackAddSalary.Name = "btnBackAddSalary";
+            this.btnBackAddSalary.Size = new System.Drawing.Size(75, 23);
+            this.btnBackAddSalary.TabIndex = 9;
+            this.btnBackAddSalary.Text = "Back";
+            this.btnBackAddSalary.UseVisualStyleBackColor = true;
+            this.btnBackAddSalary.Click += new System.EventHandler(this.btnBackAddSalary_Click);
             // 
             // btnSubmitEmployee
             // 
@@ -170,7 +171,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btnBackAddSalary);
             this.Controls.Add(this.btnSubmitEmployee);
             this.Name = "AddSalary";
             this.Text = "AddSalary";
@@ -183,7 +184,7 @@
 
         private Button btnLogOut;
         private Button btnRefresh;
-        private Button btnBack;
+        private Button btnBackAddSalary;
         private Button btnSubmitEmployee;
         private Label label1;
         private TextBox SalayAmount;
