@@ -16,5 +16,26 @@ namespace EmployeeManagementSystem
         {
             InitializeComponent();
         }
+
+        private void btnAddProject_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            AddProjects addProjects = new AddProjects();
+            addProjects.Show();
+        }
+
+        private void btnEditProject_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            UpdateProject updateProject = new UpdateProject();
+            updateProject.Show();
+        }
+
+        private void btnHomeProject_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            DashBoard dashBoard3 = new DashBoard();
+            dashBoard3.Show();
+        }
     }
 }

@@ -30,7 +30,7 @@
         {
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
+            this.btnBackAddProject = new System.Windows.Forms.Button();
             this.btnSubmitProject = new System.Windows.Forms.Button();
             this.dateTimeProjectEnd = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
@@ -65,14 +65,15 @@
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
             // 
-            // btnBack
+            // btnBackAddProject
             // 
-            this.btnBack.Location = new System.Drawing.Point(17, 342);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
-            this.btnBack.TabIndex = 66;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBackAddProject.Location = new System.Drawing.Point(17, 342);
+            this.btnBackAddProject.Name = "btnBackAddProject";
+            this.btnBackAddProject.Size = new System.Drawing.Size(75, 23);
+            this.btnBackAddProject.TabIndex = 66;
+            this.btnBackAddProject.Text = "Back";
+            this.btnBackAddProject.UseVisualStyleBackColor = true;
+            this.btnBackAddProject.Click += new System.EventHandler(this.btnBackAddProject_Click);
             // 
             // btnSubmitProject
             // 
@@ -197,7 +198,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btnBackAddProject);
             this.Controls.Add(this.btnSubmitProject);
             this.Controls.Add(this.dateTimeProjectStart);
             this.Controls.Add(this.dateTimeProjectEnd);
@@ -222,7 +223,7 @@
 
         private Button btnLogOut;
         private Button btnRefresh;
-        private Button btnBack;
+        private Button btnBackAddProject;
         private Button btnSubmitProject;
         private DateTimePicker dateTimeProjectEnd;
         private Label label10;

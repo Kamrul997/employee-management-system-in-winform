@@ -16,5 +16,12 @@ namespace EmployeeManagementSystem.Client
         {
             InitializeComponent();
         }
+
+        private void btnBackAddClient_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Clients clients2 = new Clients();
+            clients2.Show();
+        }
     }
 }

@@ -35,5 +35,12 @@ namespace EmployeeManagementSystem
             UpdateUser updateUser = new UpdateUser();
             updateUser.Show();
         }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            DashBoard dashBoard2 = new DashBoard();
+            dashBoard2.Show();
+        }
     }
 }

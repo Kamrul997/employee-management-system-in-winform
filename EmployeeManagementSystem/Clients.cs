@@ -16,5 +16,26 @@ namespace EmployeeManagementSystem.Client
         {
             InitializeComponent();
         }
+
+        private void btnAddClient_Click(object sender, EventArgs e)
+        {
+           this.Visible = false;
+            AddClient addClient = new AddClient();
+            addClient.Show();
+        }
+
+        private void btnClientEdit_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            UpdateClient updateClient = new UpdateClient();
+            updateClient.Show();
+        }
+
+        private void btnHomeClient_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            DashBoard dashBoard4 = new DashBoard();
+            dashBoard4.Show();
+        }
     }
 }

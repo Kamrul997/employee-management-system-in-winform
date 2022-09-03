@@ -16,5 +16,12 @@ namespace EmployeeManagementSystem
         {
             InitializeComponent();
         }
+
+        private void btnBackUpdateProject_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            project project3 = new project();
+            project3.Show();
+        }
     }
 }

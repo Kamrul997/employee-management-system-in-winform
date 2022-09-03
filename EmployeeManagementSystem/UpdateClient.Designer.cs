@@ -30,7 +30,7 @@
         {
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
+            this.btnBackUpdateClient = new System.Windows.Forms.Button();
             this.btnSubmitClient = new System.Windows.Forms.Button();
             this.radioButtonFemaleClient = new System.Windows.Forms.RadioButton();
             this.radioButtonMaleClient = new System.Windows.Forms.RadioButton();
@@ -66,14 +66,15 @@
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
             // 
-            // btnBack
+            // btnBackUpdateClient
             // 
-            this.btnBack.Location = new System.Drawing.Point(18, 359);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
-            this.btnBack.TabIndex = 31;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBackUpdateClient.Location = new System.Drawing.Point(18, 359);
+            this.btnBackUpdateClient.Name = "btnBackUpdateClient";
+            this.btnBackUpdateClient.Size = new System.Drawing.Size(75, 23);
+            this.btnBackUpdateClient.TabIndex = 31;
+            this.btnBackUpdateClient.Text = "Back";
+            this.btnBackUpdateClient.UseVisualStyleBackColor = true;
+            this.btnBackUpdateClient.Click += new System.EventHandler(this.btnBackUpdateClient_Click);
             // 
             // btnSubmitClient
             // 
@@ -214,7 +215,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btnBackUpdateClient);
             this.Controls.Add(this.btnSubmitClient);
             this.Controls.Add(this.radioButtonFemaleClient);
             this.Controls.Add(this.radioButtonMaleClient);
@@ -239,7 +240,7 @@
 
         private Button btnLogOut;
         private Button btnRefresh;
-        private Button btnBack;
+        private Button btnBackUpdateClient;
         private Button btnSubmitClient;
         private RadioButton radioButtonFemaleClient;
         private RadioButton radioButtonMaleClient;

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnLogOut = new System.Windows.Forms.Button();
-            this.btnHome = new System.Windows.Forms.Button();
+            this.btnHomeClient = new System.Windows.Forms.Button();
             this.btnClientEdit = new System.Windows.Forms.Button();
             this.btnDeleteClient = new System.Windows.Forms.Button();
             this.btnAddClient = new System.Windows.Forms.Button();
@@ -48,14 +48,15 @@
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = true;
             // 
-            // btnHome
+            // btnHomeClient
             // 
-            this.btnHome.Location = new System.Drawing.Point(553, 359);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(75, 23);
-            this.btnHome.TabIndex = 18;
-            this.btnHome.Text = "Home";
-            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHomeClient.Location = new System.Drawing.Point(553, 359);
+            this.btnHomeClient.Name = "btnHomeClient";
+            this.btnHomeClient.Size = new System.Drawing.Size(75, 23);
+            this.btnHomeClient.TabIndex = 18;
+            this.btnHomeClient.Text = "Home";
+            this.btnHomeClient.UseVisualStyleBackColor = true;
+            this.btnHomeClient.Click += new System.EventHandler(this.btnHomeClient_Click);
             // 
             // btnClientEdit
             // 
@@ -65,6 +66,7 @@
             this.btnClientEdit.TabIndex = 16;
             this.btnClientEdit.Text = "Edit";
             this.btnClientEdit.UseVisualStyleBackColor = true;
+            this.btnClientEdit.Click += new System.EventHandler(this.btnClientEdit_Click);
             // 
             // btnDeleteClient
             // 
@@ -83,6 +85,7 @@
             this.btnAddClient.TabIndex = 15;
             this.btnAddClient.Text = "Add New Client";
             this.btnAddClient.UseVisualStyleBackColor = true;
+            this.btnAddClient.Click += new System.EventHandler(this.btnAddClient_Click);
             // 
             // dataGridViewClient
             // 
@@ -120,7 +123,7 @@
             this.ClientSize = new System.Drawing.Size(720, 392);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnLogOut);
-            this.Controls.Add(this.btnHome);
+            this.Controls.Add(this.btnHomeClient);
             this.Controls.Add(this.btnClientEdit);
             this.Controls.Add(this.btnDeleteClient);
             this.Controls.Add(this.btnAddClient);
@@ -137,7 +140,7 @@
         #endregion
 
         private Button btnLogOut;
-        private Button btnHome;
+        private Button btnHomeClient;
         private Button btnClientEdit;
         private Button btnDeleteClient;
         private Button btnAddClient;

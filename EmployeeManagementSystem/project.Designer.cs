@@ -30,10 +30,10 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.btnLogOut = new System.Windows.Forms.Button();
-            this.btnHome = new System.Windows.Forms.Button();
+            this.btnHomeProject = new System.Windows.Forms.Button();
             this.btnEditProject = new System.Windows.Forms.Button();
             this.btnDeleteProject = new System.Windows.Forms.Button();
-            this.btnAddClient = new System.Windows.Forms.Button();
+            this.btnAddProject = new System.Windows.Forms.Button();
             this.dataGridViewClient = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClient)).BeginInit();
@@ -58,14 +58,15 @@
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = true;
             // 
-            // btnHome
+            // btnHomeProject
             // 
-            this.btnHome.Location = new System.Drawing.Point(553, 359);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(75, 23);
-            this.btnHome.TabIndex = 34;
-            this.btnHome.Text = "Home";
-            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHomeProject.Location = new System.Drawing.Point(553, 359);
+            this.btnHomeProject.Name = "btnHomeProject";
+            this.btnHomeProject.Size = new System.Drawing.Size(75, 23);
+            this.btnHomeProject.TabIndex = 34;
+            this.btnHomeProject.Text = "Home";
+            this.btnHomeProject.UseVisualStyleBackColor = true;
+            this.btnHomeProject.Click += new System.EventHandler(this.btnHomeProject_Click);
             // 
             // btnEditProject
             // 
@@ -75,6 +76,7 @@
             this.btnEditProject.TabIndex = 32;
             this.btnEditProject.Text = "Edit";
             this.btnEditProject.UseVisualStyleBackColor = true;
+            this.btnEditProject.Click += new System.EventHandler(this.btnEditProject_Click);
             // 
             // btnDeleteProject
             // 
@@ -85,14 +87,15 @@
             this.btnDeleteProject.Text = "Delete";
             this.btnDeleteProject.UseVisualStyleBackColor = true;
             // 
-            // btnAddClient
+            // btnAddProject
             // 
-            this.btnAddClient.Location = new System.Drawing.Point(13, 359);
-            this.btnAddClient.Name = "btnAddClient";
-            this.btnAddClient.Size = new System.Drawing.Size(128, 23);
-            this.btnAddClient.TabIndex = 31;
-            this.btnAddClient.Text = "Add New Project";
-            this.btnAddClient.UseVisualStyleBackColor = true;
+            this.btnAddProject.Location = new System.Drawing.Point(13, 359);
+            this.btnAddProject.Name = "btnAddProject";
+            this.btnAddProject.Size = new System.Drawing.Size(128, 23);
+            this.btnAddProject.TabIndex = 31;
+            this.btnAddProject.Text = "Add New Project";
+            this.btnAddProject.UseVisualStyleBackColor = true;
+            this.btnAddProject.Click += new System.EventHandler(this.btnAddProject_Click);
             // 
             // dataGridViewClient
             // 
@@ -120,10 +123,10 @@
             this.ClientSize = new System.Drawing.Size(720, 392);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnLogOut);
-            this.Controls.Add(this.btnHome);
+            this.Controls.Add(this.btnHomeProject);
             this.Controls.Add(this.btnEditProject);
             this.Controls.Add(this.btnDeleteProject);
-            this.Controls.Add(this.btnAddClient);
+            this.Controls.Add(this.btnAddProject);
             this.Controls.Add(this.dataGridViewClient);
             this.Controls.Add(this.label1);
             this.Name = "project";
@@ -138,10 +141,10 @@
 
         private Label label2;
         private Button btnLogOut;
-        private Button btnHome;
+        private Button btnHomeProject;
         private Button btnEditProject;
         private Button btnDeleteProject;
-        private Button btnAddClient;
+        private Button btnAddProject;
         private DataGridView dataGridViewClient;
         private Label label1;
     }

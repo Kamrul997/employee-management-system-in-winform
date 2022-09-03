@@ -42,7 +42,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
+            this.btnBackAddClient = new System.Windows.Forms.Button();
             this.btnSubmitClient = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -169,14 +169,15 @@
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
             // 
-            // btnBack
+            // btnBackAddClient
             // 
-            this.btnBack.Location = new System.Drawing.Point(19, 357);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
-            this.btnBack.TabIndex = 15;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBackAddClient.Location = new System.Drawing.Point(19, 357);
+            this.btnBackAddClient.Name = "btnBackAddClient";
+            this.btnBackAddClient.Size = new System.Drawing.Size(75, 23);
+            this.btnBackAddClient.TabIndex = 15;
+            this.btnBackAddClient.Text = "Back";
+            this.btnBackAddClient.UseVisualStyleBackColor = true;
+            this.btnBackAddClient.Click += new System.EventHandler(this.btnBackAddClient_Click);
             // 
             // btnSubmitClient
             // 
@@ -194,7 +195,7 @@
             this.ClientSize = new System.Drawing.Size(720, 392);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btnBackAddClient);
             this.Controls.Add(this.btnSubmitClient);
             this.Controls.Add(this.radioButtonFemaleClient);
             this.Controls.Add(this.radioButtonMaleClient);
@@ -231,7 +232,7 @@
         private Label label12;
         private Button btnLogOut;
         private Button btnRefresh;
-        private Button btnBack;
+        private Button btnBackAddClient;
         private Button btnSubmitClient;
     }
 }

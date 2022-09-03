@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
+            this.btnBackUpdateProject = new System.Windows.Forms.Button();
             this.btnUpdateProject = new System.Windows.Forms.Button();
             this.dateTimeProjectUpdateStart = new System.Windows.Forms.DateTimePicker();
             this.dateTimeProjectUpdateEnd = new System.Windows.Forms.DateTimePicker();
@@ -77,14 +77,15 @@
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
             // 
-            // btnBack
+            // btnBackUpdateProject
             // 
-            this.btnBack.Location = new System.Drawing.Point(18, 351);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
-            this.btnBack.TabIndex = 83;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBackUpdateProject.Location = new System.Drawing.Point(18, 351);
+            this.btnBackUpdateProject.Name = "btnBackUpdateProject";
+            this.btnBackUpdateProject.Size = new System.Drawing.Size(75, 23);
+            this.btnBackUpdateProject.TabIndex = 83;
+            this.btnBackUpdateProject.Text = "Back";
+            this.btnBackUpdateProject.UseVisualStyleBackColor = true;
+            this.btnBackUpdateProject.Click += new System.EventHandler(this.btnBackUpdateProject_Click);
             // 
             // btnUpdateProject
             // 
@@ -215,7 +216,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btnBackUpdateProject);
             this.Controls.Add(this.btnUpdateProject);
             this.Controls.Add(this.dateTimeProjectUpdateStart);
             this.Controls.Add(this.dateTimeProjectUpdateEnd);
@@ -243,7 +244,7 @@
         private Label label1;
         private Button btnLogOut;
         private Button btnRefresh;
-        private Button btnBack;
+        private Button btnBackUpdateProject;
         private Button btnUpdateProject;
         private DateTimePicker dateTimeProjectUpdateStart;
         private DateTimePicker dateTimeProjectUpdateEnd;
