@@ -6,5 +6,12 @@ namespace EmployeeManagementSystem
         {
             InitializeComponent();
         }
+
+        private void BtnLogin_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            DashBoard dashBoard = new DashBoard();
+            dashBoard.Show();
+        }
     }
 }

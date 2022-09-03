@@ -75,6 +75,7 @@
             this.btnEditUser.TabIndex = 24;
             this.btnEditUser.Text = "Edit";
             this.btnEditUser.UseVisualStyleBackColor = true;
+            this.btnEditUser.Click += new System.EventHandler(this.btnEditUser_Click);
             // 
             // btnDeleteUser
             // 
@@ -84,6 +85,7 @@
             this.btnDeleteUser.TabIndex = 25;
             this.btnDeleteUser.Text = "Delete";
             this.btnDeleteUser.UseVisualStyleBackColor = true;
+            this.btnDeleteUser.Click += new System.EventHandler(this.btnDeleteUser_Click);
             // 
             // btnAddUser
             // 
@@ -93,6 +95,7 @@
             this.btnAddUser.TabIndex = 23;
             this.btnAddUser.Text = "Add New User";
             this.btnAddUser.UseVisualStyleBackColor = true;
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
             // dataGridViewUser
             // 

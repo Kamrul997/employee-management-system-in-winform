@@ -1,6 +1,6 @@
 ﻿namespace EmployeeManagementSystem
 {
-    partial class Users
+    partial class AddUsers
     {
         /// <summary>
         /// Required designer variable.
@@ -59,7 +59,7 @@
             this.comboBoxPermission = new System.Windows.Forms.ComboBox();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
+            this.btnBackAddNewUser = new System.Windows.Forms.Button();
             this.btnSubmitUser = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -325,14 +325,15 @@
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
             // 
-            // btnBack
+            // btnBackAddNewUser
             // 
-            this.btnBack.Location = new System.Drawing.Point(13, 357);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
-            this.btnBack.TabIndex = 23;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBackAddNewUser.Location = new System.Drawing.Point(13, 357);
+            this.btnBackAddNewUser.Name = "btnBackAddNewUser";
+            this.btnBackAddNewUser.Size = new System.Drawing.Size(75, 23);
+            this.btnBackAddNewUser.TabIndex = 23;
+            this.btnBackAddNewUser.Text = "Back";
+            this.btnBackAddNewUser.UseVisualStyleBackColor = true;
+            this.btnBackAddNewUser.Click += new System.EventHandler(this.btnBackAddNewUser_Click);
             // 
             // btnSubmitUser
             // 
@@ -343,14 +344,14 @@
             this.btnSubmitUser.Text = "Submit";
             this.btnSubmitUser.UseVisualStyleBackColor = true;
             // 
-            // Users
+            // AddUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(720, 392);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btnBackAddNewUser);
             this.Controls.Add(this.btnSubmitUser);
             this.Controls.Add(this.radioButtonFemaleUser);
             this.Controls.Add(this.radioButtonMaleUser);
@@ -381,7 +382,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtFirstNameUser);
             this.Controls.Add(this.label2);
-            this.Name = "Users";
+            this.Name = "AddUsers";
             this.Text = "Users";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -421,7 +422,7 @@
         private ComboBox comboBoxPermission;
         private Button btnLogOut;
         private Button btnRefresh;
-        private Button btnBack;
+        private Button btnBackAddNewUser;
         private Button btnSubmitUser;
     }
 }

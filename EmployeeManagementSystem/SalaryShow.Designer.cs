@@ -1,6 +1,6 @@
 ﻿namespace EmployeeManagementSystem.Salary
 {
-    partial class Salary
+    partial class SalaryShow
     {
         /// <summary>
         /// Required designer variable.

@@ -79,6 +79,7 @@
             this.btnProject.TabIndex = 1;
             this.btnProject.Text = "Projects";
             this.btnProject.UseVisualStyleBackColor = true;
+            this.btnProject.Click += new System.EventHandler(this.btnProject_Click);
             // 
             // btnEmployee
             // 
@@ -88,6 +89,7 @@
             this.btnEmployee.TabIndex = 1;
             this.btnEmployee.Text = "Employees";
             this.btnEmployee.UseVisualStyleBackColor = true;
+            this.btnEmployee.Click += new System.EventHandler(this.btnEmployee_Click);
             // 
             // btnUser
             // 
@@ -97,6 +99,7 @@
             this.btnUser.TabIndex = 1;
             this.btnUser.Text = "Users";
             this.btnUser.UseVisualStyleBackColor = true;
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // btnClient
             // 
@@ -106,6 +109,7 @@
             this.btnClient.TabIndex = 1;
             this.btnClient.Text = "Clients";
             this.btnClient.UseVisualStyleBackColor = true;
+            this.btnClient.Click += new System.EventHandler(this.btnClient_Click);
             // 
             // btnLogOut
             // 
@@ -286,6 +290,7 @@
             this.btnSalary.TabIndex = 1;
             this.btnSalary.Text = "Salary";
             this.btnSalary.UseVisualStyleBackColor = true;
+            this.btnSalary.Click += new System.EventHandler(this.btnSalary_Click);
             // 
             // DashBoard
             // 

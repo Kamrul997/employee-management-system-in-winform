@@ -16,5 +16,24 @@ namespace EmployeeManagementSystem
         {
             InitializeComponent();
         }
+
+        private void btnAddUser_Click(object sender, EventArgs e)
+        {
+            this.Visible= false;
+            AddUsers addUsers = new AddUsers();
+            addUsers.Show();
+        }
+
+        private void btnDeleteUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEditUser_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            UpdateUser updateUser = new UpdateUser();
+            updateUser.Show();
+        }
     }
 }

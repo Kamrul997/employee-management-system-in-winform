@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EmployeeManagementSystem
+namespace EmployeeManagementSystem.Salary
 {
-    public partial class Users : Form
+    public partial class SalaryShow : Form
     {
-        public Users()
+        public SalaryShow()
         {
             InitializeComponent();
         }

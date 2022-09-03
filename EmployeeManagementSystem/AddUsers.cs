@@ -10,18 +10,18 @@ using System.Windows.Forms;
 
 namespace EmployeeManagementSystem
 {
-    public partial class UpdateUser : Form
+    public partial class AddUsers : Form
     {
-        public UpdateUser()
+        public AddUsers()
         {
             InitializeComponent();
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void btnBackAddNewUser_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            UserShow userShow1 = new UserShow();
-            userShow1.Show();
+            UserShow userShow2 = new UserShow();
+            userShow2.Show();
         }
     }
 }
