@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.comboBoxProject = new System.Windows.Forms.ComboBox();
-            this.btnBack = new System.Windows.Forms.Button();
+            this.btnBackUpdateEmployee = new System.Windows.Forms.Button();
             this.btnUpdateEmployee = new System.Windows.Forms.Button();
             this.dateTimeResignEmployee = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
@@ -57,7 +57,6 @@
             this.radioButtonMaleEmployee = new System.Windows.Forms.RadioButton();
             this.label13 = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.btnHome = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // comboBoxProject
@@ -68,14 +67,15 @@
             this.comboBoxProject.Size = new System.Drawing.Size(167, 23);
             this.comboBoxProject.TabIndex = 28;
             // 
-            // btnBack
+            // btnBackUpdateEmployee
             // 
-            this.btnBack.Location = new System.Drawing.Point(13, 357);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
-            this.btnBack.TabIndex = 26;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBackUpdateEmployee.Location = new System.Drawing.Point(13, 357);
+            this.btnBackUpdateEmployee.Name = "btnBackUpdateEmployee";
+            this.btnBackUpdateEmployee.Size = new System.Drawing.Size(75, 23);
+            this.btnBackUpdateEmployee.TabIndex = 26;
+            this.btnBackUpdateEmployee.Text = "Back";
+            this.btnBackUpdateEmployee.UseVisualStyleBackColor = true;
+            this.btnBackUpdateEmployee.Click += new System.EventHandler(this.btnBackUpdateEmployee_Click);
             // 
             // btnUpdateEmployee
             // 
@@ -305,27 +305,17 @@
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
             // 
-            // btnHome
-            // 
-            this.btnHome.Location = new System.Drawing.Point(175, 357);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(75, 23);
-            this.btnHome.TabIndex = 32;
-            this.btnHome.Text = "Home";
-            this.btnHome.UseVisualStyleBackColor = true;
-            // 
             // UpdateEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(720, 392);
-            this.Controls.Add(this.btnHome);
             this.Controls.Add(this.radioButtonFemaleEmployee);
             this.Controls.Add(this.radioButtonMaleEmployee);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.comboBoxProject);
             this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btnBackUpdateEmployee);
             this.Controls.Add(this.btnUpdateEmployee);
             this.Controls.Add(this.dateTimeResignEmployee);
             this.Controls.Add(this.label9);
@@ -360,7 +350,7 @@
         #endregion
 
         private ComboBox comboBoxProject;
-        private Button btnBack;
+        private Button btnBackUpdateEmployee;
         private Button btnUpdateEmployee;
         private DateTimePicker dateTimeResignEmployee;
         private Label label9;
@@ -388,6 +378,5 @@
         private RadioButton radioButtonMaleEmployee;
         private Label label13;
         private Button btnRefresh;
-        private Button btnHome;
     }
 }

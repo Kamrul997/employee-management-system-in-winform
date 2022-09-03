@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EmployeeManagementSystem.Salary;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,13 @@ namespace EmployeeManagementSystem
         private void label11_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnBackAddEmployee_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Employees employees2 = new Employees();
+            employees2.Show();
         }
     }
 }

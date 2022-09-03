@@ -65,6 +65,7 @@
             this.btnAddEmployee.TabIndex = 2;
             this.btnAddEmployee.Text = "Add New Employee";
             this.btnAddEmployee.UseVisualStyleBackColor = true;
+            this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
             // 
             // btnDeleteEmployee
             // 
@@ -83,6 +84,7 @@
             this.btnHomeEmployee.TabIndex = 4;
             this.btnHomeEmployee.Text = "Home";
             this.btnHomeEmployee.UseVisualStyleBackColor = true;
+            this.btnHomeEmployee.Click += new System.EventHandler(this.btnHomeEmployee_Click);
             // 
             // btnDetailsEmployee
             // 
@@ -92,6 +94,7 @@
             this.btnDetailsEmployee.TabIndex = 3;
             this.btnDetailsEmployee.Text = "Details";
             this.btnDetailsEmployee.UseVisualStyleBackColor = true;
+            this.btnDetailsEmployee.Click += new System.EventHandler(this.btnDetailsEmployee_Click);
             // 
             // btnLogOut
             // 

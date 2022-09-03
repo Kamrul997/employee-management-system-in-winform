@@ -48,7 +48,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.dateTimeResignEmployee = new System.Windows.Forms.DateTimePicker();
             this.btnSubmitEmployee = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
+            this.btnBackAddEmployee = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.comboBoxProject = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -221,14 +221,15 @@
             this.btnSubmitEmployee.Text = "Submit";
             this.btnSubmitEmployee.UseVisualStyleBackColor = true;
             // 
-            // btnBack
+            // btnBackAddEmployee
             // 
-            this.btnBack.Location = new System.Drawing.Point(24, 353);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
-            this.btnBack.TabIndex = 3;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBackAddEmployee.Location = new System.Drawing.Point(24, 353);
+            this.btnBackAddEmployee.Name = "btnBackAddEmployee";
+            this.btnBackAddEmployee.Size = new System.Drawing.Size(75, 23);
+            this.btnBackAddEmployee.TabIndex = 3;
+            this.btnBackAddEmployee.Text = "Back";
+            this.btnBackAddEmployee.UseVisualStyleBackColor = true;
+            this.btnBackAddEmployee.Click += new System.EventHandler(this.btnBackAddEmployee_Click);
             // 
             // btnRefresh
             // 
@@ -306,7 +307,7 @@
             this.Controls.Add(this.radioButtonMaleEmployee);
             this.Controls.Add(this.comboBoxProject);
             this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btnBackAddEmployee);
             this.Controls.Add(this.btnSubmitEmployee);
             this.Controls.Add(this.dateTimeResignEmployee);
             this.Controls.Add(this.label9);
@@ -358,7 +359,7 @@
         private Label label9;
         private DateTimePicker dateTimeResignEmployee;
         private Button btnSubmitEmployee;
-        private Button btnBack;
+        private Button btnBackAddEmployee;
         private Button btnRefresh;
         private ComboBox comboBoxProject;
         private Label label11;

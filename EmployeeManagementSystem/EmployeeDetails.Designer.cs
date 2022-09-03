@@ -33,18 +33,22 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.NameValue = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.GenderValue = new System.Windows.Forms.Label();
             this.EmailValue = new System.Windows.Forms.Label();
             this.NumberValue = new System.Windows.Forms.Label();
             this.AddressValue = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.JoinDateValue = new System.Windows.Forms.Label();
+            this.CvValue = new System.Windows.Forms.Label();
             this.SalaryValue = new System.Windows.Forms.Label();
             this.ResignDateValue = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -52,12 +56,8 @@
             this.PermissionValue = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.btnHome = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.GenderValue = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.CvValue = new System.Windows.Forms.Label();
+            this.btnBackEmployee = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -121,6 +121,15 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "ad1";
             // 
+            // GenderValue
+            // 
+            this.GenderValue.AutoSize = true;
+            this.GenderValue.Location = new System.Drawing.Point(96, 79);
+            this.GenderValue.Name = "GenderValue";
+            this.GenderValue.Size = new System.Drawing.Size(26, 15);
+            this.GenderValue.TabIndex = 0;
+            this.GenderValue.Text = "ad1";
+            // 
             // EmailValue
             // 
             this.EmailValue.AutoSize = true;
@@ -156,6 +165,15 @@
             this.label8.Size = new System.Drawing.Size(81, 15);
             this.label8.TabIndex = 0;
             this.label8.Text = "Date Of Birth :";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 79);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(51, 15);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Gender :";
             // 
             // label2
             // 
@@ -220,6 +238,16 @@
             this.JoinDateValue.Text = "label3";
             this.JoinDateValue.Click += new System.EventHandler(this.label8_Click);
             // 
+            // CvValue
+            // 
+            this.CvValue.AutoSize = true;
+            this.CvValue.Location = new System.Drawing.Point(96, 70);
+            this.CvValue.Name = "CvValue";
+            this.CvValue.Size = new System.Drawing.Size(26, 15);
+            this.CvValue.TabIndex = 0;
+            this.CvValue.Text = "ad1";
+            this.CvValue.Click += new System.EventHandler(this.SalaryValue_Click);
+            // 
             // SalaryValue
             // 
             this.SalaryValue.AutoSize = true;
@@ -238,6 +266,15 @@
             this.ResignDateValue.Size = new System.Drawing.Size(26, 15);
             this.ResignDateValue.TabIndex = 0;
             this.ResignDateValue.Text = "ad1";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 70);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(28, 15);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "CV :";
             // 
             // label11
             // 
@@ -302,15 +339,7 @@
             this.btnEdit.TabIndex = 3;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
-            // 
-            // btnHome
-            // 
-            this.btnHome.Location = new System.Drawing.Point(122, 360);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(75, 23);
-            this.btnHome.TabIndex = 5;
-            this.btnHome.Text = "Home";
-            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnLogOut
             // 
@@ -321,42 +350,15 @@
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // btnBackEmployee
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 79);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 15);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Gender :";
-            // 
-            // GenderValue
-            // 
-            this.GenderValue.AutoSize = true;
-            this.GenderValue.Location = new System.Drawing.Point(96, 79);
-            this.GenderValue.Name = "GenderValue";
-            this.GenderValue.Size = new System.Drawing.Size(26, 15);
-            this.GenderValue.TabIndex = 0;
-            this.GenderValue.Text = "ad1";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 70);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(28, 15);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "CV :";
-            // 
-            // CvValue
-            // 
-            this.CvValue.AutoSize = true;
-            this.CvValue.Location = new System.Drawing.Point(96, 70);
-            this.CvValue.Name = "CvValue";
-            this.CvValue.Size = new System.Drawing.Size(26, 15);
-            this.CvValue.TabIndex = 0;
-            this.CvValue.Text = "ad1";
-            this.CvValue.Click += new System.EventHandler(this.SalaryValue_Click);
+            this.btnBackEmployee.Location = new System.Drawing.Point(122, 360);
+            this.btnBackEmployee.Name = "btnBackEmployee";
+            this.btnBackEmployee.Size = new System.Drawing.Size(75, 23);
+            this.btnBackEmployee.TabIndex = 5;
+            this.btnBackEmployee.Text = "Back";
+            this.btnBackEmployee.UseVisualStyleBackColor = true;
+            this.btnBackEmployee.Click += new System.EventHandler(this.btnBackEmployee_Click);
             // 
             // EmployeeDetails
             // 
@@ -364,7 +366,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(720, 392);
             this.Controls.Add(this.btnLogOut);
-            this.Controls.Add(this.btnHome);
+            this.Controls.Add(this.btnBackEmployee);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox2);
@@ -411,11 +413,11 @@
         private Label label2;
         private DataGridView dataGridView1;
         private Button btnEdit;
-        private Button btnHome;
         private Button btnLogOut;
         private Label GenderValue;
         private Label label5;
         private Label CvValue;
         private Label label7;
+        private Button btnBackEmployee;
     }
 }

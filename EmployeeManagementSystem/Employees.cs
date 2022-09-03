@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EmployeeManagementSystem.Salary;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,27 @@ namespace EmployeeManagementSystem
         public Employees()
         {
             InitializeComponent();
+        }
+
+        private void btnAddEmployee_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            AddEmployee addEmployee = new AddEmployee();
+            addEmployee.Show();
+        }
+
+        private void btnDetailsEmployee_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            EmployeeDetails empDetails = new EmployeeDetails();
+            empDetails.Show();
+        }
+
+        private void btnHomeEmployee_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            DashBoard empDashBoard = new DashBoard();
+            empDashBoard.Show();
         }
     }
 }

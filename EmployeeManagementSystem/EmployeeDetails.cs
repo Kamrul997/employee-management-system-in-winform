@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EmployeeManagementSystem.Salary;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,6 +36,20 @@ namespace EmployeeManagementSystem
         private void SalaryValue_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            UpdateEmployee updateEmployee = new UpdateEmployee();
+            updateEmployee.Show();
+        }
+
+        private void btnBackEmployee_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Employees employees3 = new Employees();
+            employees3.Show();
         }
     }
 }
