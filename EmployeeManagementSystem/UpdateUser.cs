@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,6 +23,11 @@ namespace EmployeeManagementSystem
             this.Visible = false;
             UserShow userShow1 = new UserShow();
             userShow1.Show();
+        }
+
+        private void UpdateUser_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -404,6 +404,7 @@
             this.Controls.Add(this.label2);
             this.Name = "UpdateUser";
             this.Text = "UpdateUser";
+            this.Load += new System.EventHandler(this.UpdateUser_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
