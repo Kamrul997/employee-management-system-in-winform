@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Dapper;
 
 namespace EmployeeManagementSystem
 {
@@ -52,6 +53,11 @@ namespace EmployeeManagementSystem
             this.Visible = false;
             SalaryShow salary = new SalaryShow();
             salary.Show();
+        }
+
+        private void DashBoard_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

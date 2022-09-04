@@ -315,6 +315,7 @@
             this.Controls.Add(this.label10);
             this.Name = "DashBoard";
             this.Text = "DashBoard";
+            this.Load += new System.EventHandler(this.DashBoard_Load);
             this.groupBoxTotalEmployee.ResumeLayout(false);
             this.groupBoxTotalEmployee.PerformLayout();
             this.groupBoxTotalProject.ResumeLayout(false);
