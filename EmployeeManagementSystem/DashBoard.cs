@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dapper;
+using Microsoft.Data.SqlClient;
 
 namespace EmployeeManagementSystem
 {
@@ -57,7 +58,20 @@ namespace EmployeeManagementSystem
 
         private void DashBoard_Load(object sender, EventArgs e)
         {
-
+            IDbConnection db = new SqlConnection(Properties.Settings.Default.con1);
+            List<DashBoardData> myList = new List<DashBoardData>();
+            db.Open();
+            myList = db.Query<DashBoardData>("TotalCountSP", commandType: CommandType.StoredProcedure).ToList();
+            lebelTotalEmployee.Text = myList[0].TotalEmployee.ToString();
+            lebelTotalSalary.Text = myList[0].TotalSalary.ToString();
+            lebelTotalClient.Text = myList[0].TotalClient.ToString();
+            lebelTotalProject.Text = myList[0].TotalProject.ToString();
+            lebelTotalDueProject.Text = myList[0].TotalDueProject.ToString();
+            lebelTotalResigned.Text = myList[0].TotalResigned.ToString();
+            lebelTotalJoined.Text = myList[0].TotalJoin.ToString();
+            labelTodayBirthDay.Text = myList[0].Name.ToString();
+            db.Close();
+            
         }
     }
 }

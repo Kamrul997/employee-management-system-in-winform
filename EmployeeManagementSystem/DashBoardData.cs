@@ -15,6 +15,7 @@ namespace EmployeeManagementSystem
         public int TotalDueProject;
         public int TotalResigned;
         public int TotalJoin;
+        public int Name;
         
     }
 }

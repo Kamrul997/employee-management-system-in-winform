@@ -67,7 +67,7 @@
             this.btnProfile.Location = new System.Drawing.Point(522, 23);
             this.btnProfile.Name = "btnProfile";
             this.btnProfile.Size = new System.Drawing.Size(75, 23);
-            this.btnProfile.TabIndex = 1;
+            this.btnProfile.TabIndex = 5;
             this.btnProfile.Text = "Profile";
             this.btnProfile.UseVisualStyleBackColor = true;
             // 
@@ -86,7 +86,7 @@
             this.btnEmployee.Location = new System.Drawing.Point(281, 339);
             this.btnEmployee.Name = "btnEmployee";
             this.btnEmployee.Size = new System.Drawing.Size(75, 23);
-            this.btnEmployee.TabIndex = 1;
+            this.btnEmployee.TabIndex = 3;
             this.btnEmployee.Text = "Employees";
             this.btnEmployee.UseVisualStyleBackColor = true;
             this.btnEmployee.Click += new System.EventHandler(this.btnEmployee_Click);
@@ -96,7 +96,7 @@
             this.btnUser.Location = new System.Drawing.Point(38, 339);
             this.btnUser.Name = "btnUser";
             this.btnUser.Size = new System.Drawing.Size(75, 23);
-            this.btnUser.TabIndex = 1;
+            this.btnUser.TabIndex = 0;
             this.btnUser.Text = "Users";
             this.btnUser.UseVisualStyleBackColor = true;
             this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
@@ -106,7 +106,7 @@
             this.btnClient.Location = new System.Drawing.Point(200, 339);
             this.btnClient.Name = "btnClient";
             this.btnClient.Size = new System.Drawing.Size(75, 23);
-            this.btnClient.TabIndex = 1;
+            this.btnClient.TabIndex = 2;
             this.btnClient.Text = "Clients";
             this.btnClient.UseVisualStyleBackColor = true;
             this.btnClient.Click += new System.EventHandler(this.btnClient_Click);
@@ -116,7 +116,7 @@
             this.btnLogOut.Location = new System.Drawing.Point(617, 23);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(75, 23);
-            this.btnLogOut.TabIndex = 1;
+            this.btnLogOut.TabIndex = 6;
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = true;
             // 
@@ -143,9 +143,10 @@
             // lebelTotalEmployee
             // 
             this.lebelTotalEmployee.AutoSize = true;
-            this.lebelTotalEmployee.Location = new System.Drawing.Point(49, 30);
+            this.lebelTotalEmployee.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lebelTotalEmployee.Location = new System.Drawing.Point(47, 19);
             this.lebelTotalEmployee.Name = "lebelTotalEmployee";
-            this.lebelTotalEmployee.Size = new System.Drawing.Size(13, 15);
+            this.lebelTotalEmployee.Size = new System.Drawing.Size(28, 32);
             this.lebelTotalEmployee.TabIndex = 0;
             this.lebelTotalEmployee.Text = "0";
             // 
@@ -162,9 +163,10 @@
             // lebelTotalProject
             // 
             this.lebelTotalProject.AutoSize = true;
-            this.lebelTotalProject.Location = new System.Drawing.Point(48, 30);
+            this.lebelTotalProject.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lebelTotalProject.Location = new System.Drawing.Point(50, 19);
             this.lebelTotalProject.Name = "lebelTotalProject";
-            this.lebelTotalProject.Size = new System.Drawing.Size(13, 15);
+            this.lebelTotalProject.Size = new System.Drawing.Size(28, 32);
             this.lebelTotalProject.TabIndex = 0;
             this.lebelTotalProject.Text = "0";
             // 
@@ -181,9 +183,10 @@
             // lebelTotalSalary
             // 
             this.lebelTotalSalary.AutoSize = true;
-            this.lebelTotalSalary.Location = new System.Drawing.Point(49, 40);
+            this.lebelTotalSalary.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lebelTotalSalary.Location = new System.Drawing.Point(47, 25);
             this.lebelTotalSalary.Name = "lebelTotalSalary";
-            this.lebelTotalSalary.Size = new System.Drawing.Size(13, 15);
+            this.lebelTotalSalary.Size = new System.Drawing.Size(28, 32);
             this.lebelTotalSalary.TabIndex = 0;
             this.lebelTotalSalary.Text = "0";
             // 
@@ -200,9 +203,10 @@
             // lebelTotalClient
             // 
             this.lebelTotalClient.AutoSize = true;
-            this.lebelTotalClient.Location = new System.Drawing.Point(49, 38);
+            this.lebelTotalClient.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lebelTotalClient.Location = new System.Drawing.Point(47, 36);
             this.lebelTotalClient.Name = "lebelTotalClient";
-            this.lebelTotalClient.Size = new System.Drawing.Size(13, 15);
+            this.lebelTotalClient.Size = new System.Drawing.Size(28, 32);
             this.lebelTotalClient.TabIndex = 0;
             this.lebelTotalClient.Text = "0";
             // 
@@ -219,15 +223,17 @@
             // lebelTotalDueProject
             // 
             this.lebelTotalDueProject.AutoSize = true;
-            this.lebelTotalDueProject.Location = new System.Drawing.Point(68, 30);
+            this.lebelTotalDueProject.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lebelTotalDueProject.Location = new System.Drawing.Point(68, 19);
             this.lebelTotalDueProject.Name = "lebelTotalDueProject";
-            this.lebelTotalDueProject.Size = new System.Drawing.Size(13, 15);
+            this.lebelTotalDueProject.Size = new System.Drawing.Size(28, 32);
             this.lebelTotalDueProject.TabIndex = 0;
             this.lebelTotalDueProject.Text = "0";
             // 
             // groupBoxJoinedEmployoee
             // 
             this.groupBoxJoinedEmployoee.Controls.Add(this.lebelTotalJoined);
+            this.groupBoxJoinedEmployoee.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBoxJoinedEmployoee.Location = new System.Drawing.Point(487, 241);
             this.groupBoxJoinedEmployoee.Name = "groupBoxJoinedEmployoee";
             this.groupBoxJoinedEmployoee.Size = new System.Drawing.Size(205, 71);
@@ -238,9 +244,10 @@
             // lebelTotalJoined
             // 
             this.lebelTotalJoined.AutoSize = true;
-            this.lebelTotalJoined.Location = new System.Drawing.Point(66, 38);
+            this.lebelTotalJoined.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lebelTotalJoined.Location = new System.Drawing.Point(66, 19);
             this.lebelTotalJoined.Name = "lebelTotalJoined";
-            this.lebelTotalJoined.Size = new System.Drawing.Size(13, 15);
+            this.lebelTotalJoined.Size = new System.Drawing.Size(28, 32);
             this.lebelTotalJoined.TabIndex = 0;
             this.lebelTotalJoined.Text = "0";
             // 
@@ -257,9 +264,10 @@
             // lebelTotalResigned
             // 
             this.lebelTotalResigned.AutoSize = true;
-            this.lebelTotalResigned.Location = new System.Drawing.Point(66, 31);
+            this.lebelTotalResigned.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lebelTotalResigned.Location = new System.Drawing.Point(66, 25);
             this.lebelTotalResigned.Name = "lebelTotalResigned";
-            this.lebelTotalResigned.Size = new System.Drawing.Size(13, 15);
+            this.lebelTotalResigned.Size = new System.Drawing.Size(28, 32);
             this.lebelTotalResigned.TabIndex = 0;
             this.lebelTotalResigned.Text = "0";
             // 
@@ -276,18 +284,19 @@
             // labelTodayBirthDay
             // 
             this.labelTodayBirthDay.AutoSize = true;
-            this.labelTodayBirthDay.Location = new System.Drawing.Point(6, 38);
+            this.labelTodayBirthDay.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelTodayBirthDay.Location = new System.Drawing.Point(66, 36);
             this.labelTodayBirthDay.Name = "labelTodayBirthDay";
-            this.labelTodayBirthDay.Size = new System.Drawing.Size(125, 15);
+            this.labelTodayBirthDay.Size = new System.Drawing.Size(28, 32);
             this.labelTodayBirthDay.TabIndex = 0;
-            this.labelTodayBirthDay.Text = "No birthday availeable";
+            this.labelTodayBirthDay.Text = "0";
             // 
             // btnSalary
             // 
             this.btnSalary.Location = new System.Drawing.Point(362, 339);
             this.btnSalary.Name = "btnSalary";
             this.btnSalary.Size = new System.Drawing.Size(75, 23);
-            this.btnSalary.TabIndex = 1;
+            this.btnSalary.TabIndex = 4;
             this.btnSalary.Text = "Salary";
             this.btnSalary.UseVisualStyleBackColor = true;
             this.btnSalary.Click += new System.EventHandler(this.btnSalary_Click);
