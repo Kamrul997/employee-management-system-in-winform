@@ -40,10 +40,19 @@ namespace EmployeeManagementSystem
             DashBoard empDashBoard = new DashBoard();
             empDashBoard.Show();
         }
-
+         DisplayData displayData = new DisplayData();
         private void Employees_Load(object sender, EventArgs e)
         {
-            DisplayData displayData = new DisplayData();
+           
+            displayData.DatagridviewDisplay("ShowEmployeeNameAndContactSP", dataGridViewEmployee);
+            
+        }
+
+        private void btnDeleteEmployee_Click(object sender, EventArgs e)
+        {
+            DeleteData deleteData = new DeleteData();
+            deleteData.DeleteItems("DeleteEmployeeSP", dataGridViewEmployee);
+
             displayData.DatagridviewDisplay("ShowEmployeeNameAndContactSP", dataGridViewEmployee);
             
         }
