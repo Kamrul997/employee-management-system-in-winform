@@ -25,7 +25,7 @@ namespace EmployeeManagementSystem
         private void btnBackUpdateEmployee_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            EmployeeDetails employeeDetails2 = new EmployeeDetails();
+            EmployeeDetails employeeDetails2 = new EmployeeDetails(0);
             employeeDetails2.Show();
         }
     }

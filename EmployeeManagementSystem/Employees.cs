@@ -29,8 +29,20 @@ namespace EmployeeManagementSystem
 
         private void btnDetailsEmployee_Click(object sender, EventArgs e)
         {
+            int employeeID = 0;
+            int TotalRow = dataGridViewEmployee.Rows.Count;
+            for (int i = 0; i < TotalRow; i++)
+            {
+
+                
+                DataGridViewRow gridr = dataGridViewEmployee.Rows[i];
+                if (gridr.Selected == true)
+                {
+                    employeeID = Int32.Parse(gridr.Cells[0].FormattedValue.ToString());
+                }
+            }
             this.Visible = false;
-            EmployeeDetails empDetails = new EmployeeDetails();
+            EmployeeDetails empDetails = new EmployeeDetails(employeeID);
             empDetails.Show();
         }
 

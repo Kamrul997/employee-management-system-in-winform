@@ -53,7 +53,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.PermissionValue = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
@@ -80,7 +79,6 @@
             this.IDValue.Size = new System.Drawing.Size(38, 15);
             this.IDValue.TabIndex = 0;
             this.IDValue.Text = "label1";
-            this.IDValue.Click += new System.EventHandler(this.IDValue_Click);
             // 
             // groupBox1
             // 
@@ -236,7 +234,6 @@
             this.JoinDateValue.Size = new System.Drawing.Size(38, 15);
             this.JoinDateValue.TabIndex = 0;
             this.JoinDateValue.Text = "label3";
-            this.JoinDateValue.Click += new System.EventHandler(this.label8_Click);
             // 
             // CvValue
             // 
@@ -246,7 +243,6 @@
             this.CvValue.Size = new System.Drawing.Size(26, 15);
             this.CvValue.TabIndex = 0;
             this.CvValue.Text = "ad1";
-            this.CvValue.Click += new System.EventHandler(this.SalaryValue_Click);
             // 
             // SalaryValue
             // 
@@ -256,7 +252,6 @@
             this.SalaryValue.Size = new System.Drawing.Size(26, 15);
             this.SalaryValue.TabIndex = 0;
             this.SalaryValue.Text = "ad1";
-            this.SalaryValue.Click += new System.EventHandler(this.SalaryValue_Click);
             // 
             // ResignDateValue
             // 
@@ -312,18 +307,9 @@
             this.label20.TabIndex = 0;
             this.label20.Text = "Assign Projects";
             // 
-            // PermissionValue
-            // 
-            this.PermissionValue.AutoSize = true;
-            this.PermissionValue.Location = new System.Drawing.Point(204, 9);
-            this.PermissionValue.Name = "PermissionValue";
-            this.PermissionValue.Size = new System.Drawing.Size(38, 15);
-            this.PermissionValue.TabIndex = 0;
-            this.PermissionValue.Text = "label1";
-            this.PermissionValue.Click += new System.EventHandler(this.label21_Click);
-            // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(269, 78);
             this.dataGridView1.Name = "dataGridView1";
@@ -371,12 +357,12 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.PermissionValue);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.IDValue);
             this.Controls.Add(this.label1);
             this.Name = "EmployeeDetails";
             this.Text = "EmployeeDetails";
+            this.Load += new System.EventHandler(this.EmployeeDetails_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -406,7 +392,6 @@
         private Label label12;
         private Label label13;
         private Label label20;
-        private Label PermissionValue;
         private Label label9;
         private Label EmailValue;
         private Label label8;

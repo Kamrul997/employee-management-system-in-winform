@@ -51,6 +51,7 @@
             // dataGridViewEmployee
             // 
             this.dataGridViewEmployee.AllowUserToAddRows = false;
+            this.dataGridViewEmployee.AllowUserToDeleteRows = false;
             this.dataGridViewEmployee.AllowUserToResizeColumns = false;
             this.dataGridViewEmployee.AllowUserToResizeRows = false;
             this.dataGridViewEmployee.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -59,6 +60,8 @@
             this.dataGridViewEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dataGridViewEmployee.Location = new System.Drawing.Point(12, 58);
             this.dataGridViewEmployee.Name = "dataGridViewEmployee";
+            this.dataGridViewEmployee.ReadOnly = true;
+            this.dataGridViewEmployee.RowHeadersVisible = false;
             this.dataGridViewEmployee.RowTemplate.Height = 25;
             this.dataGridViewEmployee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewEmployee.Size = new System.Drawing.Size(696, 249);

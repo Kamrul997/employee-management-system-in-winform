@@ -13,30 +13,12 @@ namespace EmployeeManagementSystem
 {
     public partial class EmployeeDetails : Form
     {
-        public EmployeeDetails()
+        public int employeeId;
+        public EmployeeDetails(int id)
         {
+            this.employeeId = id;
             InitializeComponent();
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label21_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void IDValue_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SalaryValue_Click(object sender, EventArgs e)
-        {
-
-        }
+        }              
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
@@ -50,6 +32,11 @@ namespace EmployeeManagementSystem
             this.Visible = false;
             Employees employees3 = new Employees();
             employees3.Show();
+        }
+
+        private void EmployeeDetails_Load(object sender, EventArgs e)
+        {
+            IDValue.Text = employeeId.ToString();
         }
     }
 }
