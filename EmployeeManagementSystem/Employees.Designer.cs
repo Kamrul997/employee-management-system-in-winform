@@ -119,6 +119,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Employees";
             this.Text = "Employees";
+            this.Load += new System.EventHandler(this.Employees_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmployee)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
