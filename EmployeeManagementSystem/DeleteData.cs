@@ -25,7 +25,7 @@ namespace EmployeeManagementSystem
                 {                                
                    SqlCommand spcmd = new SqlCommand(DeleteSPname , conn);
                    spcmd.CommandType = CommandType.StoredProcedure;
-                   spcmd.Parameters.AddWithValue("@DeleteID", SqlDbType.Int).Value = dataGridViewName.Rows[i].Cells[0].Value;                    
+                   spcmd.Parameters.AddWithValue("@DeleteID", SqlDbType.Int).Value = gridr.Cells[0].Value;                    
                    spcmd.ExecuteNonQuery();
                 }
             }

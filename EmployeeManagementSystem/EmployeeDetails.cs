@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Dapper;
+using Microsoft.Data.SqlClient;
+using System.Collections;
 
 namespace EmployeeManagementSystem
 {
@@ -36,7 +39,26 @@ namespace EmployeeManagementSystem
 
         private void EmployeeDetails_Load(object sender, EventArgs e)
         {
+
             IDValue.Text = employeeId.ToString();
+            IDbConnection db = new SqlConnection(Properties.Settings.Default.con1);
+            List<EmployeeDetailsData> EmpDetails = new List<EmployeeDetailsData>();
+            db.Open();
+            EmpDetails = db.Query<EmployeeDetailsData>("ShowAllEmployeeDetailsSP", new {ID= employeeId }, commandType: CommandType.StoredProcedure).ToList();
+            NameValue.Text = EmpDetails[0].NAME;
+            AddressValue.Text = EmpDetails[0].Eaddress;
+            NumberValue.Text = EmpDetails[0].MoblileNumber;
+            EmailValue.Text = EmpDetails[0].Email;
+            GenderValue.Text = EmpDetails[0].Gender;
+            EmpDOB.Text = EmpDetails[0].BirthDate;
+            JoinDateValue.Text = EmpDetails[0].JoinDate;
+            ResignDateValue.Text = EmpDetails[0].ResignDate;
+            SalaryValue.Text = EmpDetails[0].Salary.ToString();
+            CvValue.Text = EmpDetails[0].CV;
+            db.Close();
+
+            DisplayData displayData = new DisplayData();
+            displayData.DatagridviewDisplaywithparameter("EmployeeAsignProjectSP", employeeId, dataGridView1);
         }
     }
 }

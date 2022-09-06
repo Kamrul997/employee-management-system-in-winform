@@ -32,7 +32,7 @@
             this.IDValue = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.NameValue = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.EmpDOB = new System.Windows.Forms.Label();
             this.GenderValue = new System.Windows.Forms.Label();
             this.EmailValue = new System.Windows.Forms.Label();
             this.NumberValue = new System.Windows.Forms.Label();
@@ -76,14 +76,13 @@
             this.IDValue.AutoSize = true;
             this.IDValue.Location = new System.Drawing.Point(26, 9);
             this.IDValue.Name = "IDValue";
-            this.IDValue.Size = new System.Drawing.Size(38, 15);
+            this.IDValue.Size = new System.Drawing.Size(0, 15);
             this.IDValue.TabIndex = 0;
-            this.IDValue.Text = "label1";
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.NameValue);
-            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.EmpDOB);
             this.groupBox1.Controls.Add(this.GenderValue);
             this.groupBox1.Controls.Add(this.EmailValue);
             this.groupBox1.Controls.Add(this.NumberValue);
@@ -106,54 +105,48 @@
             this.NameValue.AutoSize = true;
             this.NameValue.Location = new System.Drawing.Point(96, 19);
             this.NameValue.Name = "NameValue";
-            this.NameValue.Size = new System.Drawing.Size(38, 15);
+            this.NameValue.Size = new System.Drawing.Size(0, 15);
             this.NameValue.TabIndex = 0;
-            this.NameValue.Text = "label3";
             // 
-            // label9
+            // EmpDOB
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(96, 94);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(26, 15);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "ad1";
+            this.EmpDOB.AutoSize = true;
+            this.EmpDOB.Location = new System.Drawing.Point(96, 94);
+            this.EmpDOB.Name = "EmpDOB";
+            this.EmpDOB.Size = new System.Drawing.Size(0, 15);
+            this.EmpDOB.TabIndex = 0;
             // 
             // GenderValue
             // 
             this.GenderValue.AutoSize = true;
             this.GenderValue.Location = new System.Drawing.Point(96, 79);
             this.GenderValue.Name = "GenderValue";
-            this.GenderValue.Size = new System.Drawing.Size(26, 15);
+            this.GenderValue.Size = new System.Drawing.Size(0, 15);
             this.GenderValue.TabIndex = 0;
-            this.GenderValue.Text = "ad1";
             // 
             // EmailValue
             // 
             this.EmailValue.AutoSize = true;
             this.EmailValue.Location = new System.Drawing.Point(96, 64);
             this.EmailValue.Name = "EmailValue";
-            this.EmailValue.Size = new System.Drawing.Size(26, 15);
+            this.EmailValue.Size = new System.Drawing.Size(0, 15);
             this.EmailValue.TabIndex = 0;
-            this.EmailValue.Text = "ad1";
             // 
             // NumberValue
             // 
             this.NumberValue.AutoSize = true;
             this.NumberValue.Location = new System.Drawing.Point(96, 49);
             this.NumberValue.Name = "NumberValue";
-            this.NumberValue.Size = new System.Drawing.Size(26, 15);
+            this.NumberValue.Size = new System.Drawing.Size(0, 15);
             this.NumberValue.TabIndex = 0;
-            this.NumberValue.Text = "ad1";
             // 
             // AddressValue
             // 
             this.AddressValue.AutoSize = true;
             this.AddressValue.Location = new System.Drawing.Point(96, 34);
             this.AddressValue.Name = "AddressValue";
-            this.AddressValue.Size = new System.Drawing.Size(26, 15);
+            this.AddressValue.Size = new System.Drawing.Size(0, 15);
             this.AddressValue.TabIndex = 0;
-            this.AddressValue.Text = "ad1";
             // 
             // label8
             // 
@@ -231,36 +224,32 @@
             this.JoinDateValue.AutoSize = true;
             this.JoinDateValue.Location = new System.Drawing.Point(96, 25);
             this.JoinDateValue.Name = "JoinDateValue";
-            this.JoinDateValue.Size = new System.Drawing.Size(38, 15);
+            this.JoinDateValue.Size = new System.Drawing.Size(0, 15);
             this.JoinDateValue.TabIndex = 0;
-            this.JoinDateValue.Text = "label3";
             // 
             // CvValue
             // 
             this.CvValue.AutoSize = true;
             this.CvValue.Location = new System.Drawing.Point(96, 70);
             this.CvValue.Name = "CvValue";
-            this.CvValue.Size = new System.Drawing.Size(26, 15);
+            this.CvValue.Size = new System.Drawing.Size(0, 15);
             this.CvValue.TabIndex = 0;
-            this.CvValue.Text = "ad1";
             // 
             // SalaryValue
             // 
             this.SalaryValue.AutoSize = true;
             this.SalaryValue.Location = new System.Drawing.Point(96, 55);
             this.SalaryValue.Name = "SalaryValue";
-            this.SalaryValue.Size = new System.Drawing.Size(26, 15);
+            this.SalaryValue.Size = new System.Drawing.Size(0, 15);
             this.SalaryValue.TabIndex = 0;
-            this.SalaryValue.Text = "ad1";
             // 
             // ResignDateValue
             // 
             this.ResignDateValue.AutoSize = true;
             this.ResignDateValue.Location = new System.Drawing.Point(96, 40);
             this.ResignDateValue.Name = "ResignDateValue";
-            this.ResignDateValue.Size = new System.Drawing.Size(26, 15);
+            this.ResignDateValue.Size = new System.Drawing.Size(0, 15);
             this.ResignDateValue.TabIndex = 0;
-            this.ResignDateValue.Text = "ad1";
             // 
             // label7
             // 
@@ -310,10 +299,13 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(269, 78);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(410, 253);
             this.dataGridView1.TabIndex = 2;
             // 
@@ -392,7 +384,7 @@
         private Label label12;
         private Label label13;
         private Label label20;
-        private Label label9;
+        private Label EmpDOB;
         private Label EmailValue;
         private Label label8;
         private Label label2;

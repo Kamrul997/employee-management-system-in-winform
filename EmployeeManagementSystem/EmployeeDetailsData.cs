@@ -8,6 +8,16 @@ namespace EmployeeManagementSystem
 {
     internal class EmployeeDetailsData
     {
-        public int NAME;
+        public string NAME;
+        public string Email;
+        public string Eaddress;
+        public string MoblileNumber;
+        public string CV;
+        public string BirthDate;
+        public string JoinDate;
+        public string ResignDate;
+        public string Gender;
+        public int Salary;
+        
     }
 }
