@@ -45,8 +45,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dateTimeJoinEmployee = new System.Windows.Forms.DateTimePicker();
-            this.label9 = new System.Windows.Forms.Label();
-            this.dateTimeResignEmployee = new System.Windows.Forms.DateTimePicker();
             this.btnSubmitEmployee = new System.Windows.Forms.Button();
             this.btnBackAddEmployee = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
@@ -56,6 +54,8 @@
             this.radioButtonFemaleEmployee = new System.Windows.Forms.RadioButton();
             this.label12 = new System.Windows.Forms.Label();
             this.btnLogOut = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -82,7 +82,7 @@
             this.txtFirstNameEmployee.Location = new System.Drawing.Point(24, 83);
             this.txtFirstNameEmployee.Name = "txtFirstNameEmployee";
             this.txtFirstNameEmployee.Size = new System.Drawing.Size(223, 23);
-            this.txtFirstNameEmployee.TabIndex = 1;
+            this.txtFirstNameEmployee.TabIndex = 0;
             // 
             // label3
             // 
@@ -114,7 +114,7 @@
             this.txtEmailEmployee.Location = new System.Drawing.Point(24, 182);
             this.txtEmailEmployee.Name = "txtEmailEmployee";
             this.txtEmailEmployee.Size = new System.Drawing.Size(223, 23);
-            this.txtEmailEmployee.TabIndex = 1;
+            this.txtEmailEmployee.TabIndex = 2;
             // 
             // label5
             // 
@@ -130,7 +130,7 @@
             this.txtMobileNumberEmployee.Location = new System.Drawing.Point(24, 238);
             this.txtMobileNumberEmployee.Name = "txtMobileNumberEmployee";
             this.txtMobileNumberEmployee.Size = new System.Drawing.Size(223, 23);
-            this.txtMobileNumberEmployee.TabIndex = 1;
+            this.txtMobileNumberEmployee.TabIndex = 3;
             // 
             // label6
             // 
@@ -146,7 +146,7 @@
             this.txtCvEmployee.Location = new System.Drawing.Point(24, 288);
             this.txtCvEmployee.Name = "txtCvEmployee";
             this.txtCvEmployee.Size = new System.Drawing.Size(223, 23);
-            this.txtCvEmployee.TabIndex = 1;
+            this.txtCvEmployee.TabIndex = 4;
             // 
             // label7
             // 
@@ -162,14 +162,14 @@
             this.txtAddressEmployee.Location = new System.Drawing.Point(284, 83);
             this.txtAddressEmployee.Name = "txtAddressEmployee";
             this.txtAddressEmployee.Size = new System.Drawing.Size(211, 23);
-            this.txtAddressEmployee.TabIndex = 1;
+            this.txtAddressEmployee.TabIndex = 5;
             // 
             // dateTimeBirthEmployee
             // 
             this.dateTimeBirthEmployee.Location = new System.Drawing.Point(284, 140);
             this.dateTimeBirthEmployee.Name = "dateTimeBirthEmployee";
             this.dateTimeBirthEmployee.Size = new System.Drawing.Size(211, 23);
-            this.dateTimeBirthEmployee.TabIndex = 2;
+            this.dateTimeBirthEmployee.TabIndex = 6;
             // 
             // label10
             // 
@@ -194,39 +194,24 @@
             this.dateTimeJoinEmployee.Location = new System.Drawing.Point(284, 199);
             this.dateTimeJoinEmployee.Name = "dateTimeJoinEmployee";
             this.dateTimeJoinEmployee.Size = new System.Drawing.Size(211, 23);
-            this.dateTimeJoinEmployee.TabIndex = 2;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(284, 246);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(69, 15);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Resign Date";
-            // 
-            // dateTimeResignEmployee
-            // 
-            this.dateTimeResignEmployee.Location = new System.Drawing.Point(284, 264);
-            this.dateTimeResignEmployee.Name = "dateTimeResignEmployee";
-            this.dateTimeResignEmployee.Size = new System.Drawing.Size(211, 23);
-            this.dateTimeResignEmployee.TabIndex = 2;
+            this.dateTimeJoinEmployee.TabIndex = 7;
             // 
             // btnSubmitEmployee
             // 
             this.btnSubmitEmployee.Location = new System.Drawing.Point(539, 353);
             this.btnSubmitEmployee.Name = "btnSubmitEmployee";
             this.btnSubmitEmployee.Size = new System.Drawing.Size(75, 23);
-            this.btnSubmitEmployee.TabIndex = 3;
+            this.btnSubmitEmployee.TabIndex = 11;
             this.btnSubmitEmployee.Text = "Submit";
             this.btnSubmitEmployee.UseVisualStyleBackColor = true;
+            this.btnSubmitEmployee.Click += new System.EventHandler(this.btnSubmitEmployee_Click);
             // 
             // btnBackAddEmployee
             // 
             this.btnBackAddEmployee.Location = new System.Drawing.Point(24, 353);
             this.btnBackAddEmployee.Name = "btnBackAddEmployee";
             this.btnBackAddEmployee.Size = new System.Drawing.Size(75, 23);
-            this.btnBackAddEmployee.TabIndex = 3;
+            this.btnBackAddEmployee.TabIndex = 13;
             this.btnBackAddEmployee.Text = "Back";
             this.btnBackAddEmployee.UseVisualStyleBackColor = true;
             this.btnBackAddEmployee.Click += new System.EventHandler(this.btnBackAddEmployee_Click);
@@ -236,7 +221,7 @@
             this.btnRefresh.Location = new System.Drawing.Point(120, 353);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(75, 23);
-            this.btnRefresh.TabIndex = 3;
+            this.btnRefresh.TabIndex = 12;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
             // 
@@ -246,7 +231,7 @@
             this.comboBoxProject.Location = new System.Drawing.Point(529, 83);
             this.comboBoxProject.Name = "comboBoxProject";
             this.comboBoxProject.Size = new System.Drawing.Size(167, 23);
-            this.comboBoxProject.TabIndex = 4;
+            this.comboBoxProject.TabIndex = 9;
             // 
             // label11
             // 
@@ -260,10 +245,10 @@
             // radioButtonMaleEmployee
             // 
             this.radioButtonMaleEmployee.AutoSize = true;
-            this.radioButtonMaleEmployee.Location = new System.Drawing.Point(529, 144);
+            this.radioButtonMaleEmployee.Location = new System.Drawing.Point(9, 39);
             this.radioButtonMaleEmployee.Name = "radioButtonMaleEmployee";
             this.radioButtonMaleEmployee.Size = new System.Drawing.Size(51, 19);
-            this.radioButtonMaleEmployee.TabIndex = 5;
+            this.radioButtonMaleEmployee.TabIndex = 0;
             this.radioButtonMaleEmployee.TabStop = true;
             this.radioButtonMaleEmployee.Text = "Male";
             this.radioButtonMaleEmployee.UseVisualStyleBackColor = true;
@@ -271,10 +256,10 @@
             // radioButtonFemaleEmployee
             // 
             this.radioButtonFemaleEmployee.AutoSize = true;
-            this.radioButtonFemaleEmployee.Location = new System.Drawing.Point(621, 144);
+            this.radioButtonFemaleEmployee.Location = new System.Drawing.Point(101, 39);
             this.radioButtonFemaleEmployee.Name = "radioButtonFemaleEmployee";
             this.radioButtonFemaleEmployee.Size = new System.Drawing.Size(63, 19);
-            this.radioButtonFemaleEmployee.TabIndex = 6;
+            this.radioButtonFemaleEmployee.TabIndex = 1;
             this.radioButtonFemaleEmployee.TabStop = true;
             this.radioButtonFemaleEmployee.Text = "Female";
             this.radioButtonFemaleEmployee.UseVisualStyleBackColor = true;
@@ -282,7 +267,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(529, 122);
+            this.label12.Location = new System.Drawing.Point(9, 17);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(45, 15);
             this.label12.TabIndex = 0;
@@ -293,30 +278,36 @@
             this.btnLogOut.Location = new System.Drawing.Point(633, 353);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(75, 23);
-            this.btnLogOut.TabIndex = 7;
+            this.btnLogOut.TabIndex = 14;
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.radioButtonMaleEmployee);
+            this.panel1.Controls.Add(this.radioButtonFemaleEmployee);
+            this.panel1.Location = new System.Drawing.Point(519, 110);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(166, 95);
+            this.panel1.TabIndex = 10;
             // 
             // AddEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(720, 392);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnLogOut);
-            this.Controls.Add(this.radioButtonFemaleEmployee);
-            this.Controls.Add(this.radioButtonMaleEmployee);
             this.Controls.Add(this.comboBoxProject);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnBackAddEmployee);
             this.Controls.Add(this.btnSubmitEmployee);
-            this.Controls.Add(this.dateTimeResignEmployee);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.dateTimeJoinEmployee);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dateTimeBirthEmployee);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtAddressEmployee);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtCvEmployee);
@@ -332,6 +323,9 @@
             this.Controls.Add(this.label1);
             this.Name = "AddEmployee";
             this.Text = "AddEmployee";
+            this.Load += new System.EventHandler(this.AddEmployee_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -367,5 +361,6 @@
         private RadioButton radioButtonFemaleEmployee;
         private Label label12;
         private Button btnLogOut;
+        private Panel panel1;
     }
 }

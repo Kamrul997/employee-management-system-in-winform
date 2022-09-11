@@ -20,4 +20,19 @@ namespace EmployeeManagementSystem
         public int Salary;
         
     }
+    internal class SingleEmployee
+    {
+        public string FristName;
+        public string LastName;
+        public string Email;
+        public string Eaddress;
+        public string MoblileNumber;
+        public string CV;
+        public string BirthDate;
+        public string JoinDate;
+        public string ResignDate;
+        public string Gender;
+        public int UserID;
+
+    }
 }

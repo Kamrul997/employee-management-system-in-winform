@@ -26,7 +26,7 @@ namespace EmployeeManagementSystem
         private void btnEdit_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            UpdateEmployee updateEmployee = new UpdateEmployee();
+            UpdateEmployee updateEmployee = new UpdateEmployee(employeeId);
             updateEmployee.Show();
         }
 

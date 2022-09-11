@@ -311,7 +311,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(30, 360);
+            this.btnEdit.Location = new System.Drawing.Point(107, 360);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
             this.btnEdit.TabIndex = 3;
@@ -330,7 +330,7 @@
             // 
             // btnBackEmployee
             // 
-            this.btnBackEmployee.Location = new System.Drawing.Point(122, 360);
+            this.btnBackEmployee.Location = new System.Drawing.Point(26, 360);
             this.btnBackEmployee.Name = "btnBackEmployee";
             this.btnBackEmployee.Size = new System.Drawing.Size(75, 23);
             this.btnBackEmployee.TabIndex = 5;

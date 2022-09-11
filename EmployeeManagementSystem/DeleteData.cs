@@ -27,6 +27,7 @@ namespace EmployeeManagementSystem
                    spcmd.CommandType = CommandType.StoredProcedure;
                    spcmd.Parameters.AddWithValue("@DeleteID", SqlDbType.Int).Value = gridr.Cells[0].Value;                    
                    spcmd.ExecuteNonQuery();
+                    MessageBox.Show("Deleted Successfully.");
                 }
             }
             conn.Close();
