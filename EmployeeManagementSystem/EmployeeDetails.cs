@@ -60,5 +60,13 @@ namespace EmployeeManagementSystem
             DisplayData displayData = new DisplayData();
             displayData.DatagridviewDisplaywithparameter("EmployeeAsignProjectSP", employeeId, dataGridView1);
         }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Form1 form1 = new Form1();
+            form1.Show();
+        }
+    }
     }
 }

@@ -37,5 +37,26 @@ namespace EmployeeManagementSystem.Client
             DashBoard dashBoard4 = new DashBoard();
             dashBoard4.Show();
         }
+        DisplayData displayData = new DisplayData();
+        private void Clients_Load(object sender, EventArgs e)
+        {
+            displayData.DatagridviewDisplay("ShowAllClientSP", dataGridViewClient);
+        }
+
+        private void btnDeleteClient_Click(object sender, EventArgs e)
+        {
+            DeleteData deleteData = new DeleteData();
+            deleteData.DeleteItems("DeleteClientSP", dataGridViewClient);
+
+            displayData.DatagridviewDisplay("ShowAllClientSP", dataGridViewClient);
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Form1 form1 = new Form1();
+            form1.Show();
+        }
+    }
     }
 }

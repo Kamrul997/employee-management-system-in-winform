@@ -34,11 +34,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.LoginEmailBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnClose);
             this.groupBox1.Controls.Add(this.BtnLogin);
             this.groupBox1.Controls.Add(this.LogonPassBox);
             this.groupBox1.Controls.Add(this.label2);
@@ -99,6 +101,18 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Email :";
             // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Red;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnClose.Location = new System.Drawing.Point(43, 188);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 33);
+            this.btnClose.TabIndex = 1;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -122,5 +136,6 @@
         private TextBox LoginEmailBox;
         private Label label1;
         private Button BtnLogin;
+        private Button btnClose;
     }
 }

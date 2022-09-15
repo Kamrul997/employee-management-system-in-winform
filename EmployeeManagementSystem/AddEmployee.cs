@@ -60,7 +60,7 @@ namespace EmployeeManagementSystem
                 BirthDate = BirthDateValue,
                 JoinDate = JoinDateValue,
                 ResignDate = ResignDateValue,
-                UserID = 100,
+                UserID = LoginID.LoginUserID,
                 Gender = genderValue
 
             }, commandType: CommandType.StoredProcedure);
@@ -71,6 +71,13 @@ namespace EmployeeManagementSystem
         private void AddEmployee_Load(object sender, EventArgs e)
         {
             radioButtonMaleEmployee.Checked = true;
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Form1 form1 = new Form1();
+            form1.Show();
         }
     }
 }

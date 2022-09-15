@@ -47,6 +47,7 @@
             this.btnLogOut.TabIndex = 19;
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // btnHomeClient
             // 
@@ -76,6 +77,7 @@
             this.btnDeleteClient.TabIndex = 17;
             this.btnDeleteClient.Text = "Delete";
             this.btnDeleteClient.UseVisualStyleBackColor = true;
+            this.btnDeleteClient.Click += new System.EventHandler(this.btnDeleteClient_Click);
             // 
             // btnAddClient
             // 
@@ -89,10 +91,13 @@
             // 
             // dataGridViewClient
             // 
+            this.dataGridViewClient.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewClient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewClient.Location = new System.Drawing.Point(11, 50);
             this.dataGridViewClient.Name = "dataGridViewClient";
+            this.dataGridViewClient.RowHeadersVisible = false;
             this.dataGridViewClient.RowTemplate.Height = 25;
+            this.dataGridViewClient.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewClient.Size = new System.Drawing.Size(696, 281);
             this.dataGridViewClient.TabIndex = 14;
             // 
@@ -131,6 +136,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Clients";
             this.Text = "Clients";
+            this.Load += new System.EventHandler(this.Clients_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClient)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

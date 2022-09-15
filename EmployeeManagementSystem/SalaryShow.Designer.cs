@@ -46,6 +46,7 @@
             this.btnLogOut.TabIndex = 12;
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // btnHomeSalary
             // 

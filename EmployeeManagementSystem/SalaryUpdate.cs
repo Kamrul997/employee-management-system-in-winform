@@ -23,5 +23,13 @@ namespace EmployeeManagementSystem.Salary
             SalaryShow salaryShow3 = new SalaryShow();
             salaryShow3.Show();
         }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Form1 form1 = new Form1();
+            form1.Show();
+        }
+    }
     }
 }

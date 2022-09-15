@@ -37,5 +37,13 @@ namespace EmployeeManagementSystem
             DashBoard dashBoard3 = new DashBoard();
             dashBoard3.Show();
         }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Form1 form1 = new Form1();
+            form1.Show();
+        }
+    }
     }
 }
