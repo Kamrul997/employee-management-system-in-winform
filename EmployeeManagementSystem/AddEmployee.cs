@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Drawing;
 using System.Linq;
 using System.Net;
@@ -63,6 +64,16 @@ namespace EmployeeManagementSystem
                 UserID = LoginID.LoginUserID,
                 Gender = genderValue
 
+            }, commandType: CommandType.StoredProcedure); 
+            List<lastEmp> lastEmps = new List<lastEmp>();
+            lastEmps = db.Query<lastEmp>("LastID", commandType: CommandType.StoredProcedure).ToList();
+            int LastEmpID = lastEmps[0].LastID;
+            int projectId = int.Parse(comboBoxProject.GetItemText(comboBoxProject.SelectedValue));
+            db.Execute("AddNewEmployeeProjectSP", new
+            {
+                EmployeeID = LastEmpID,
+                ProjectID = projectId
+
             }, commandType: CommandType.StoredProcedure);
             MessageBox.Show("Added a new Employee");
             db.Close();
@@ -71,6 +82,18 @@ namespace EmployeeManagementSystem
         private void AddEmployee_Load(object sender, EventArgs e)
         {
             radioButtonMaleEmployee.Checked = true;
+            SqlConnection db = new SqlConnection(Properties.Settings.Default.con1);
+            db.Open();
+            SqlCommand cmd = new SqlCommand("select ProjectID, ProjectName from project",db);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            cmd.ExecuteNonQuery();
+            db.Close();
+            comboBoxProject.DataSource = ds.Tables[0];
+            comboBoxProject.DisplayMember = "ProjectName";
+            comboBoxProject.ValueMember = "ProjectID";
+            comboBoxProject.Text = "--Select Project--";
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)

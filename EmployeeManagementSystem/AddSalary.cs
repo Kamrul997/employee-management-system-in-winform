@@ -31,5 +31,5 @@ namespace EmployeeManagementSystem.Salary
             form1.Show();
         }
     }
-    }
+    
 }

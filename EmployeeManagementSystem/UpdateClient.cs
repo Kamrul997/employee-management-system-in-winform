@@ -31,5 +31,5 @@ namespace EmployeeManagementSystem.Client
             form1.Show();
         }
     }
-    }
+    
 }

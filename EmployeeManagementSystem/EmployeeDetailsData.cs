@@ -35,4 +35,8 @@ namespace EmployeeManagementSystem
         public int UserID;
 
     }
+    public class lastEmp
+    {
+        public int LastID { get; set; }
+    }
 }

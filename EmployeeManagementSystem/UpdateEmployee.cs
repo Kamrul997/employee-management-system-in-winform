@@ -50,6 +50,18 @@ namespace EmployeeManagementSystem
            // SalaryValue.Text = EmpDetails[0].UserID.ToString();
             
             db.Close();
+            SqlConnection db1 = new SqlConnection(Properties.Settings.Default.con1);
+            db1.Open();
+            SqlCommand cmd = new SqlCommand("select ProjectID, ProjectName from project", db1);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            cmd.ExecuteNonQuery();
+            db1.Close();
+            comboBoxProject.DataSource = ds.Tables[0];
+            comboBoxProject.DisplayMember = "ProjectName";
+            comboBoxProject.ValueMember = "ProjectID";
+            comboBoxProject.Text = "--Select Project--";
         }
 
         private void btnBackUpdateEmployee_Click(object sender, EventArgs e)
@@ -86,6 +98,13 @@ namespace EmployeeManagementSystem
                 ResignDate = ResignDateValue,
                 UserID = 100,
                 Gender = genderValue
+
+            }, commandType: CommandType.StoredProcedure);
+            int projectId = int.Parse(comboBoxProject.GetItemText(comboBoxProject.SelectedValue));
+            db.Execute("AddNewEmployeeProjectSP", new
+            {
+                EmployeeID = employeeId,
+                ProjectID = projectId
 
             }, commandType: CommandType.StoredProcedure);
             MessageBox.Show("Employee Successfully Updated");
