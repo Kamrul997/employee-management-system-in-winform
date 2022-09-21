@@ -47,8 +47,7 @@ namespace EmployeeManagementSystem
             dateTimeBirthEmployee.Text = EmpDetails[0].BirthDate;
             dateTimeJoinEmployee.Text = EmpDetails[0].JoinDate;
             dateTimeResignEmployee.Text = EmpDetails[0].ResignDate;
-           // SalaryValue.Text = EmpDetails[0].UserID.ToString();
-            
+                       
             db.Close();
             SqlConnection db1 = new SqlConnection(Properties.Settings.Default.con1);
             db1.Open();
@@ -73,42 +72,58 @@ namespace EmployeeManagementSystem
 
         private void btnUpdateEmployee_Click(object sender, EventArgs e)
         {
-            string JoinDateValue = dateTimeJoinEmployee.Value.ToShortDateString();
-            string BirthDateValue = dateTimeBirthEmployee.Value.ToShortDateString();
-            string ResignDateValue = dateTimeResignEmployee.Value.ToShortDateString();
-            string genderValue = "";
-            bool isChecked = radioButtonMaleEmployee.Checked;
-            if (isChecked)
-                genderValue = radioButtonMaleEmployee.Text;
-            else
-                genderValue = radioButtonFemaleEmployee.Text;
-            IDbConnection db = new SqlConnection(Properties.Settings.Default.con1);
-            db.Open();
-            db.Execute("UpdateEmployeeSP", new
+            ValideFeilds valideFeilds = new ValideFeilds();
+            string emailerror = valideFeilds.EmailUpdateValidation(txtEmailEmployee.Text);
+            string mobileerror = valideFeilds.MobileUpdateValidation(txtMobileNumberEmployee.Text);
+            if (emailerror!="")
             {
-                EMPLOYEEID = employeeId,
-                FristName = txtFirstNameEmployee.Text,
-                LastName = txtLastNameEmployee.Text,
-                Email = txtEmailEmployee.Text,
-                MoblileNumber = txtMobileNumberEmployee.Text,
-                CV = txtCvEmployee.Text,
-                Eaddress = txtAddressEmployee.Text,
-                BirthDate = BirthDateValue,
-                JoinDate = JoinDateValue,
-                ResignDate = ResignDateValue,
-                UserID = 100,
-                Gender = genderValue
-
-            }, commandType: CommandType.StoredProcedure);
-            int projectId = int.Parse(comboBoxProject.GetItemText(comboBoxProject.SelectedValue));
-            db.Execute("AddNewEmployeeProjectSP", new
+                MessageBox.Show(emailerror);
+                return;
+            }
+            else if (mobileerror != "")
             {
-                EmployeeID = employeeId,
-                ProjectID = projectId
+                MessageBox.Show(mobileerror);
+                return;
+            }
+            else 
+            { 
+                    string JoinDateValue = dateTimeJoinEmployee.Value.ToShortDateString();
+                    string BirthDateValue = dateTimeBirthEmployee.Value.ToShortDateString();
+                    string ResignDateValue = dateTimeResignEmployee.Value.ToShortDateString();
+                    string genderValue = "";
+                    bool isChecked = radioButtonMaleEmployee.Checked;
+                    if (isChecked)
+                        genderValue = radioButtonMaleEmployee.Text;
+                    else
+                        genderValue = radioButtonFemaleEmployee.Text;
+                    IDbConnection db = new SqlConnection(Properties.Settings.Default.con1);
+                    db.Open();
+                    db.Execute("UpdateEmployeeSP", new
+                    {
+                        EMPLOYEEID = employeeId,
+                        FristName = txtFirstNameEmployee.Text,
+                        LastName = txtLastNameEmployee.Text,
+                        Email = txtEmailEmployee.Text,
+                        MoblileNumber = txtMobileNumberEmployee.Text,
+                        CV = txtCvEmployee.Text,
+                        Eaddress = txtAddressEmployee.Text,
+                        BirthDate = BirthDateValue,
+                        JoinDate = JoinDateValue,
+                        ResignDate = ResignDateValue,
+                        UserID = 100,
+                        Gender = genderValue
 
-            }, commandType: CommandType.StoredProcedure);
-            MessageBox.Show("Employee Successfully Updated");
-            db.Close();
+                    }, commandType: CommandType.StoredProcedure);
+                    int projectId = int.Parse(comboBoxProject.GetItemText(comboBoxProject.SelectedValue));
+                    db.Execute("AddNewEmployeeProjectSP", new
+                    {
+                        EmployeeID = employeeId,
+                        ProjectID = projectId
+
+                    }, commandType: CommandType.StoredProcedure);
+                    MessageBox.Show("Employee Successfully Updated");
+                    db.Close();
+            }
         }
     }
 }

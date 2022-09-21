@@ -35,8 +35,21 @@ namespace EmployeeManagementSystem
         public int UserID;
 
     }
+    
+
     public class lastEmp
     {
-        public int LastID { get; set; }
+        public int EmployeeID { get; set; }
+        public string ErrorMessage { get; set; }
+    }
+    public class IsEmailValid
+    {
+        public int Total { get; set; }
+        public string Email { get; set; }
+    }
+    public class IsMobilelValid
+    {
+        public int Total { get; set; }
+        public string MoblileNumber { get; set; }
     }
 }

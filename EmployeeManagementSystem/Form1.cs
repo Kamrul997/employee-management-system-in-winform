@@ -17,7 +17,7 @@ namespace EmployeeManagementSystem
         private void BtnLogin_Click(object sender, EventArgs e)
         {
 
-            IDbConnection db = new SqlConnection(Properties.Settings.Default.con1);
+            /*IDbConnection db = new SqlConnection(Properties.Settings.Default.con1);
             List<LoginUserDetails> myList = new List<LoginUserDetails>();
             db.Open();
             myList = db.Query<LoginUserDetails>("LoginIdSP", new { Email = LoginEmailBox.Text }, commandType: CommandType.StoredProcedure).ToList();
@@ -36,7 +36,6 @@ namespace EmployeeManagementSystem
             
             if (LoginEmailBox.Text == LogEmail && LogonPassBox.Text == LogPass)
             {
-                MessageBox.Show("Login Successfully");
                 this.Visible = false;
                 DashBoard dashBoard = new DashBoard();
                 dashBoard.Show();
@@ -48,10 +47,12 @@ namespace EmployeeManagementSystem
                 return;
                 
             }
-            db.Close();
-             
-            
-           
+            db.Close();*/
+
+            this.Visible = false;
+            DashBoard dashBoard = new DashBoard();
+            dashBoard.Show();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)

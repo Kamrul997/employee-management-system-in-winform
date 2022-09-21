@@ -39,44 +39,70 @@ namespace EmployeeManagementSystem
 
         private void btnSubmitEmployee_Click(object sender, EventArgs e)
         {
-            string JoinDateValue = dateTimeJoinEmployee.Value.ToShortDateString();
-            string BirthDateValue = dateTimeBirthEmployee.Value.ToShortDateString();
-            string ResignDateValue = "";
-            string genderValue = "";
-            bool isChecked = radioButtonMaleEmployee.Checked;
-            if (isChecked)
-                genderValue = radioButtonMaleEmployee.Text;
+            ValideFeilds valideFeilds = new ValideFeilds();
+            string emailerror = valideFeilds.EmailValidation(txtEmailEmployee.Text);
+            string mobileerror = valideFeilds.MobileValidation(txtMobileNumberEmployee.Text);
+            if (emailerror != "")
+            {
+                MessageBox.Show(emailerror);
+                return;
+            }
+            else if (mobileerror != "")
+            {
+                MessageBox.Show(mobileerror);
+                return;
+            }
             else
-                genderValue = radioButtonFemaleEmployee.Text;
-            IDbConnection db = new SqlConnection(Properties.Settings.Default.con1);
-            db.Open();
-            db.Execute("AddNewEmployeeSP",new
             {
-                FristName = txtFirstNameEmployee.Text,
-                LastName = txtLastNameEmployee.Text,
-                Email = txtEmailEmployee.Text,
-                MoblileNumber = txtMobileNumberEmployee.Text,
-                CV = txtCvEmployee.Text,
-                Eaddress = txtAddressEmployee.Text,
-                BirthDate = BirthDateValue,
-                JoinDate = JoinDateValue,
-                ResignDate = ResignDateValue,
-                UserID = LoginID.LoginUserID,
-                Gender = genderValue
+                string JoinDateValue = dateTimeJoinEmployee.Value.ToShortDateString();
+                string BirthDateValue = dateTimeBirthEmployee.Value.ToShortDateString();
+                string ResignDateValue = "";
+                string genderValue = "";
+                bool isChecked = radioButtonMaleEmployee.Checked;
+                if (isChecked)
+                    genderValue = radioButtonMaleEmployee.Text;
+                else
+                    genderValue = radioButtonFemaleEmployee.Text;
+                IDbConnection db = new SqlConnection(Properties.Settings.Default.con1);
+                db.Open();
 
-            }, commandType: CommandType.StoredProcedure); 
-            List<lastEmp> lastEmps = new List<lastEmp>();
-            lastEmps = db.Query<lastEmp>("LastID", commandType: CommandType.StoredProcedure).ToList();
-            int LastEmpID = lastEmps[0].LastID;
-            int projectId = int.Parse(comboBoxProject.GetItemText(comboBoxProject.SelectedValue));
-            db.Execute("AddNewEmployeeProjectSP", new
-            {
-                EmployeeID = LastEmpID,
-                ProjectID = projectId
+                List<lastEmp> lastEmps = new List<lastEmp>();
 
-            }, commandType: CommandType.StoredProcedure);
-            MessageBox.Show("Added a new Employee");
+                lastEmps = db.Query<lastEmp>("AddNewEmployeeSP", new{
+                        FristName = txtFirstNameEmployee.Text,
+                        LastName = txtLastNameEmployee.Text,
+                        Email = txtEmailEmployee.Text,
+                        MoblileNumber = txtMobileNumberEmployee.Text,
+                        CV = txtCvEmployee.Text,
+                        Eaddress = txtAddressEmployee.Text,
+                        BirthDate = BirthDateValue,
+                        JoinDate = JoinDateValue,
+                        ResignDate = ResignDateValue,
+                        UserID = 100,
+                        Gender = genderValue
+                    }, commandType: CommandType.StoredProcedure).ToList();
+                
+                int LastEmpID = lastEmps[0].EmployeeID;
+                int projectId = int.Parse(comboBoxProject.GetItemText(comboBoxProject.SelectedValue));
+                db.Execute("AddNewEmployeeProjectSP", new
+                {
+                    EmployeeID = LastEmpID,
+                    ProjectID = projectId
+
+                }, commandType: CommandType.StoredProcedure);
+                
+                if (lastEmps[0].ErrorMessage == "")
+                {
+                    MessageBox.Show("Added a new Employee");
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show(lastEmps[0].ErrorMessage);
+                    return;
+                }            
             db.Close();
+            }
         }
 
         private void AddEmployee_Load(object sender, EventArgs e)
