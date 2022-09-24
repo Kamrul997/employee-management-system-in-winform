@@ -60,8 +60,8 @@ namespace EmployeeManagementSystem
             comboBoxProject.DataSource = ds.Tables[0];
             comboBoxProject.DisplayMember = "ProjectName";
             comboBoxProject.ValueMember = "ProjectID";
-            comboBoxProject.Text = "--Select Project--";
             comboBoxProject.SelectedIndex = -1;
+            comboBoxProject.Text = "--Select Project--";
         }
 
         private void btnBackUpdateEmployee_Click(object sender, EventArgs e)
