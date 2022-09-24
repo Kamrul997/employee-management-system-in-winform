@@ -61,6 +61,7 @@ namespace EmployeeManagementSystem
             comboBoxProject.DisplayMember = "ProjectName";
             comboBoxProject.ValueMember = "ProjectID";
             comboBoxProject.Text = "--Select Project--";
+            comboBoxProject.SelectedIndex = -1;
         }
 
         private void btnBackUpdateEmployee_Click(object sender, EventArgs e)
@@ -86,7 +87,8 @@ namespace EmployeeManagementSystem
                 return;
             }
             else 
-            { 
+            {
+                int projectId;
                     string JoinDateValue = dateTimeJoinEmployee.Value.ToShortDateString();
                     string BirthDateValue = dateTimeBirthEmployee.Value.ToShortDateString();
                     string ResignDateValue = dateTimeResignEmployee.Value.ToShortDateString();
@@ -97,8 +99,10 @@ namespace EmployeeManagementSystem
                     else
                         genderValue = radioButtonFemaleEmployee.Text;
                     IDbConnection db = new SqlConnection(Properties.Settings.Default.con1);
-                    db.Open();
-                    db.Execute("UpdateEmployeeSP", new
+                
+                db.Open();
+                List<lastEmp> lastEmps2 = new List<lastEmp>();
+                lastEmps2 = db.Query<lastEmp>("UpdateEmployeeSP", new
                     {
                         EMPLOYEEID = employeeId,
                         FristName = txtFirstNameEmployee.Text,
@@ -113,15 +117,36 @@ namespace EmployeeManagementSystem
                         UserID = 100,
                         Gender = genderValue
 
-                    }, commandType: CommandType.StoredProcedure);
-                    int projectId = int.Parse(comboBoxProject.GetItemText(comboBoxProject.SelectedValue));
-                    db.Execute("AddNewEmployeeProjectSP", new
-                    {
-                        EmployeeID = employeeId,
-                        ProjectID = projectId
+                    }, commandType: CommandType.StoredProcedure).ToList();
 
-                    }, commandType: CommandType.StoredProcedure);
-                    MessageBox.Show("Employee Successfully Updated");
+                    if (comboBoxProject.GetItemText(comboBoxProject.SelectedValue) == "")
+                    {
+                        projectId = 0;
+                    }
+                    else
+                    {
+                        projectId = int.Parse(comboBoxProject.GetItemText(comboBoxProject.SelectedValue));
+                    }
+                    if (projectId>0)
+                    {
+                        db.Execute("AddNewEmployeeProjectSP", new
+                        {
+                            EmployeeID = employeeId,
+                            ProjectID = projectId
+
+                        }, commandType: CommandType.StoredProcedure);
+                    }
+                    
+                    if (lastEmps2[0].ErrorMessage == "")
+                    {
+                        MessageBox.Show("Employee Successfully Updated");
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show(lastEmps2[0].ErrorMessage);
+                        return;
+                    }               
                     db.Close();
             }
         }
