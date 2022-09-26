@@ -48,13 +48,13 @@
             this.btnSubmitEmployee = new System.Windows.Forms.Button();
             this.btnBackAddEmployee = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.comboBoxProject = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.radioButtonMaleEmployee = new System.Windows.Forms.RadioButton();
             this.radioButtonFemaleEmployee = new System.Windows.Forms.RadioButton();
             this.label12 = new System.Windows.Forms.Label();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.checkBoxProject = new System.Windows.Forms.CheckedListBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -225,14 +225,6 @@
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
             // 
-            // comboBoxProject
-            // 
-            this.comboBoxProject.FormattingEnabled = true;
-            this.comboBoxProject.Location = new System.Drawing.Point(529, 83);
-            this.comboBoxProject.Name = "comboBoxProject";
-            this.comboBoxProject.Size = new System.Drawing.Size(167, 23);
-            this.comboBoxProject.TabIndex = 9;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -267,7 +259,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(9, 17);
+            this.label12.Location = new System.Drawing.Point(3, 12);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(45, 15);
             this.label12.TabIndex = 0;
@@ -288,19 +280,27 @@
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.radioButtonMaleEmployee);
             this.panel1.Controls.Add(this.radioButtonFemaleEmployee);
-            this.panel1.Location = new System.Drawing.Point(519, 110);
+            this.panel1.Location = new System.Drawing.Point(284, 238);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(166, 95);
             this.panel1.TabIndex = 10;
+            // 
+            // checkBoxProject
+            // 
+            this.checkBoxProject.FormattingEnabled = true;
+            this.checkBoxProject.Location = new System.Drawing.Point(532, 95);
+            this.checkBoxProject.Name = "checkBoxProject";
+            this.checkBoxProject.Size = new System.Drawing.Size(160, 166);
+            this.checkBoxProject.TabIndex = 15;
             // 
             // AddEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(720, 392);
+            this.Controls.Add(this.checkBoxProject);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnLogOut);
-            this.Controls.Add(this.comboBoxProject);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnBackAddEmployee);
             this.Controls.Add(this.btnSubmitEmployee);
@@ -356,12 +356,12 @@
         private Button btnSubmitEmployee;
         private Button btnBackAddEmployee;
         private Button btnRefresh;
-        private ComboBox comboBoxProject;
         private Label label11;
         private RadioButton radioButtonMaleEmployee;
         private RadioButton radioButtonFemaleEmployee;
         private Label label12;
         private Button btnLogOut;
         private Panel panel1;
+        private CheckedListBox checkBoxProject;
     }
 }

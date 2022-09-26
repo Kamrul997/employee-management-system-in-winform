@@ -27,6 +27,7 @@ namespace EmployeeManagementSystem
             EmployeeID.ReadOnly = true;
             IDbConnection db = new SqlConnection(Properties.Settings.Default.con1);
             List<SingleEmployee> EmpDetails = new List<SingleEmployee>();
+            List<ProjectList> projectsList = new List<ProjectList>();
             db.Open();
             EmpDetails = db.Query<SingleEmployee>("ShowAllSingleEmployeeSP", new { ID = employeeId }, commandType: CommandType.StoredProcedure).ToList();
             txtFirstNameEmployee.Text = EmpDetails[0].FristName;
@@ -47,21 +48,31 @@ namespace EmployeeManagementSystem
             dateTimeBirthEmployee.Text = EmpDetails[0].BirthDate;
             dateTimeJoinEmployee.Text = EmpDetails[0].JoinDate;
             dateTimeResignEmployee.Text = EmpDetails[0].ResignDate;
-                       
+            projectsList = db.Query<ProjectList>("EmployeeProjectsSP",
+                new { ID = employeeId }, commandType: CommandType.StoredProcedure).ToList();
             db.Close();
             SqlConnection db1 = new SqlConnection(Properties.Settings.Default.con1);
             db1.Open();
             SqlCommand cmd = new SqlCommand("select ProjectID, ProjectName from project", db1);
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
-            DataSet ds = new DataSet();
+            DataTable ds = new DataTable();
             sda.Fill(ds);
             cmd.ExecuteNonQuery();
             db1.Close();
-            comboBoxProject.DataSource = ds.Tables[0];
-            comboBoxProject.DisplayMember = "ProjectName";
-            comboBoxProject.ValueMember = "ProjectID";
-            comboBoxProject.SelectedIndex = -1;
-            comboBoxProject.Text = "--Select Project--";
+            ((ListBox)checkBoxProject).DataSource = ds;
+            ((ListBox)checkBoxProject).DisplayMember = "ProjectName";
+            ((ListBox)checkBoxProject).ValueMember = "ProjectID"; 
+
+            for (int i = 0; i < checkBoxProject.Items.Count; i++)
+            {   var row = (checkBoxProject.Items[i] as DataRowView).Row;
+                int id = row.Field<int>("ProjectID");
+                ProjectList project = projectsList.Find(p => p.ProjectID == id);
+                if (project!=null)
+                {
+                    checkBoxProject.SetItemChecked(i, true);
+                }
+            }
+
         }
 
         private void btnBackUpdateEmployee_Click(object sender, EventArgs e)
@@ -88,7 +99,7 @@ namespace EmployeeManagementSystem
             }
             else 
             {
-                int projectId;
+                    int projectId;
                     string JoinDateValue = dateTimeJoinEmployee.Value.ToShortDateString();
                     string BirthDateValue = dateTimeBirthEmployee.Value.ToShortDateString();
                     string ResignDateValue = dateTimeResignEmployee.Value.ToShortDateString();
@@ -118,26 +129,47 @@ namespace EmployeeManagementSystem
                         Gender = genderValue
 
                     }, commandType: CommandType.StoredProcedure).ToList();
+                db.Execute("DeleteEmployeeProjectSP", new
+                {
+                    DeleteID = employeeId,
+                    
 
-                    if (comboBoxProject.GetItemText(comboBoxProject.SelectedValue) == "")
-                    {
-                        projectId = 0;
-                    }
-                    else
-                    {
-                        projectId = int.Parse(comboBoxProject.GetItemText(comboBoxProject.SelectedValue));
-                    }
-                    if (projectId>0)
+                }, commandType: CommandType.StoredProcedure);
+
+                foreach (var item in checkBoxProject.CheckedItems)
+                {
+                    int id = 0;
+                    var row = (item as DataRowView).Row;
+                    id = row.Field<int>("ProjectID");
+                    if (id != 0)
                     {
                         db.Execute("AddNewEmployeeProjectSP", new
                         {
                             EmployeeID = employeeId,
-                            ProjectID = projectId
+                            ProjectID = id
 
                         }, commandType: CommandType.StoredProcedure);
                     }
-                    
-                    if (lastEmps2[0].ErrorMessage == "")
+
+                }
+                /*for (int i = 0; i < checkBoxProject.Items.Count; i++)
+                {
+                    *//*var row = (checkBoxProject.Items[i] as DataRowView).Row;
+                    int id = row.Field<int>("ProjectID");
+                    ProjectList project = projectsList.Find(p => p.ProjectID == id);
+                    if (project == null)
+                    {
+                        db.Execute("AddNewEmployeeProjectSP", new
+                        {
+                            EmployeeID = employeeId,
+                            ProjectID = id
+
+                        }, commandType: CommandType.StoredProcedure);
+                    }*//*
+
+                }*/
+
+                if (lastEmps2[0].ErrorMessage == "")
                     {
                         MessageBox.Show("Employee Successfully Updated");
                         return;

@@ -1,4 +1,5 @@
 ﻿using Dapper;
+using System.Data.SqlClient;
 using EmployeeManagementSystem.Salary;
 using Microsoft.Data.SqlClient;
 using Microsoft.VisualBasic.ApplicationServices;
@@ -16,11 +17,14 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using CheckBox = System.Windows.Forms.CheckBox;
+//using System.Data.DataSetExtensions;
 
 namespace EmployeeManagementSystem
 {
     public partial class AddEmployee : Form
     {
+        public int checkBoxItem;
         public AddEmployee()
         {
             InitializeComponent();
@@ -62,23 +66,16 @@ namespace EmployeeManagementSystem
                 string genderValue = "";
                 bool isChecked = radioButtonMaleEmployee.Checked;
                 if (isChecked)
-                { genderValue = radioButtonMaleEmployee.Text; }
-                else
-                { genderValue = radioButtonFemaleEmployee.Text;}
-                if (comboBoxProject.GetItemText(comboBoxProject.SelectedValue) == "")
                 {
-                    projectId = 0;
+                    genderValue = radioButtonMaleEmployee.Text; 
                 }
                 else
-                {
-                    projectId = int.Parse(comboBoxProject.GetItemText(comboBoxProject.SelectedValue));
+                { 
+                    genderValue = radioButtonFemaleEmployee.Text;
                 }
-                
                 IDbConnection db = new SqlConnection(Properties.Settings.Default.con1);
                 db.Open();
-
                 List<lastEmp> lastEmps = new List<lastEmp>();
-
                 lastEmps = db.Query<lastEmp>("AddNewEmployeeSP", new{
                         FristName = txtFirstNameEmployee.Text,
                         LastName = txtLastNameEmployee.Text,
@@ -91,20 +88,27 @@ namespace EmployeeManagementSystem
                         ResignDate = ResignDateValue,
                         UserID = 100,
                         Gender = genderValue
-                    }, commandType: CommandType.StoredProcedure).ToList();
-                
+                    }, commandType: CommandType.StoredProcedure).ToList();                
                 int LastEmpID = lastEmps[0].EmployeeID;
                 
-                if (projectId >0)
-                {
-                    db.Execute("AddNewEmployeeProjectSP", new
-                    {
-                        EmployeeID = LastEmpID,
-                        ProjectID = projectId
 
-                    }, commandType: CommandType.StoredProcedure);
+
+                foreach (var item in checkBoxProject.CheckedItems)
+                {
+                    int id = 0;
+                    var row = (item as DataRowView).Row;
+                    id = row.Field<int>("ProjectID");
+                    if (id != 0)
+                    {
+                        db.Execute("AddNewEmployeeProjectSP", new
+                        {
+                            EmployeeID = LastEmpID,
+                            ProjectID = id
+
+                        }, commandType: CommandType.StoredProcedure);
+                    }
+
                 }
-                
                 if (lastEmps[0].ErrorMessage == null)
                 {
                     MessageBox.Show("Added a new Employee");
@@ -126,15 +130,16 @@ namespace EmployeeManagementSystem
             db.Open();
             SqlCommand cmd = new SqlCommand("select ProjectID, ProjectName from project",db);
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
-            DataSet ds = new DataSet();
+            DataTable ds = new DataTable();
             sda.Fill(ds);
             cmd.ExecuteNonQuery();
             db.Close();
-            comboBoxProject.DataSource = ds.Tables[0];
-            comboBoxProject.DisplayMember = "ProjectName";
-            comboBoxProject.ValueMember = "ProjectID";            
-            comboBoxProject.SelectedIndex = -1;
-            comboBoxProject.Text = "--Select Project--";
+            ((ListBox)checkBoxProject).DataSource = ds;
+            ((ListBox)checkBoxProject).DisplayMember = "ProjectName";
+            ((ListBox)checkBoxProject).ValueMember = "ProjectID";
+            
+
+
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)

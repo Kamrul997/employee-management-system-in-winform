@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBoxProject = new System.Windows.Forms.ComboBox();
             this.btnBackUpdateEmployee = new System.Windows.Forms.Button();
             this.btnUpdateEmployee = new System.Windows.Forms.Button();
             this.dateTimeResignEmployee = new System.Windows.Forms.DateTimePicker();
@@ -58,16 +57,9 @@
             this.label13 = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.checkBoxProject = new System.Windows.Forms.CheckedListBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // comboBoxProject
-            // 
-            this.comboBoxProject.FormattingEnabled = true;
-            this.comboBoxProject.Location = new System.Drawing.Point(517, 76);
-            this.comboBoxProject.Name = "comboBoxProject";
-            this.comboBoxProject.Size = new System.Drawing.Size(167, 23);
-            this.comboBoxProject.TabIndex = 9;
             // 
             // btnBackUpdateEmployee
             // 
@@ -313,18 +305,26 @@
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.radioButtonFemaleEmployee);
             this.panel1.Controls.Add(this.radioButtonMaleEmployee);
-            this.panel1.Location = new System.Drawing.Point(498, 122);
+            this.panel1.Location = new System.Drawing.Point(498, 237);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 100);
             this.panel1.TabIndex = 10;
+            // 
+            // checkBoxProject
+            // 
+            this.checkBoxProject.FormattingEnabled = true;
+            this.checkBoxProject.Location = new System.Drawing.Point(517, 78);
+            this.checkBoxProject.Name = "checkBoxProject";
+            this.checkBoxProject.Size = new System.Drawing.Size(160, 166);
+            this.checkBoxProject.TabIndex = 18;
             // 
             // UpdateEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(720, 392);
+            this.Controls.Add(this.checkBoxProject);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.comboBoxProject);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnBackUpdateEmployee);
             this.Controls.Add(this.btnUpdateEmployee);
@@ -361,8 +361,6 @@
         }
 
         #endregion
-
-        private ComboBox comboBoxProject;
         private Button btnBackUpdateEmployee;
         private Button btnUpdateEmployee;
         private DateTimePicker dateTimeResignEmployee;
@@ -392,5 +390,6 @@
         private Label label13;
         private Button btnRefresh;
         private Panel panel1;
+        private CheckedListBox checkBoxProject;
     }
 }
