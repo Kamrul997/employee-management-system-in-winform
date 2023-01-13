@@ -152,22 +152,7 @@ namespace EmployeeManagementSystem
                     }
 
                 }
-                /*for (int i = 0; i < checkBoxProject.Items.Count; i++)
-                {
-                    *//*var row = (checkBoxProject.Items[i] as DataRowView).Row;
-                    int id = row.Field<int>("ProjectID");
-                    ProjectList project = projectsList.Find(p => p.ProjectID == id);
-                    if (project == null)
-                    {
-                        db.Execute("AddNewEmployeeProjectSP", new
-                        {
-                            EmployeeID = employeeId,
-                            ProjectID = id
-
-                        }, commandType: CommandType.StoredProcedure);
-                    }*//*
-
-                }*/
+                
 
                 if (lastEmps2[0].ErrorMessage == "")
                     {

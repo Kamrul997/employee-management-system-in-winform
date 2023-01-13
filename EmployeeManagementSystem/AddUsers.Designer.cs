@@ -52,11 +52,7 @@
             this.txtConfirmPass = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtPhotoUser = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.comboBoxDesignation = new System.Windows.Forms.ComboBox();
-            this.comboBoxPermission = new System.Windows.Forms.ComboBox();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnBackAddNewUser = new System.Windows.Forms.Button();
@@ -265,47 +261,17 @@
             this.txtPhotoUser.Size = new System.Drawing.Size(211, 23);
             this.txtPhotoUser.TabIndex = 16;
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(482, 110);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(70, 15);
-            this.label13.TabIndex = 14;
-            this.label13.Text = "Designation";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(482, 128);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(167, 23);
-            this.comboBox1.TabIndex = 19;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(482, 110);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(65, 15);
-            this.label14.TabIndex = 14;
-            this.label14.Text = "Permission";
-            // 
             // comboBoxDesignation
             // 
             this.comboBoxDesignation.FormattingEnabled = true;
+            this.comboBoxDesignation.Items.AddRange(new object[] {
+            "2nd Admin",
+            "frist officer",
+            "2nd officer"});
             this.comboBoxDesignation.Location = new System.Drawing.Point(482, 82);
             this.comboBoxDesignation.Name = "comboBoxDesignation";
             this.comboBoxDesignation.Size = new System.Drawing.Size(211, 23);
             this.comboBoxDesignation.TabIndex = 19;
-            // 
-            // comboBoxPermission
-            // 
-            this.comboBoxPermission.FormattingEnabled = true;
-            this.comboBoxPermission.Location = new System.Drawing.Point(482, 128);
-            this.comboBoxPermission.Name = "comboBoxPermission";
-            this.comboBoxPermission.Size = new System.Drawing.Size(211, 23);
-            this.comboBoxPermission.TabIndex = 19;
             // 
             // btnLogOut
             // 
@@ -344,6 +310,7 @@
             this.btnSubmitUser.TabIndex = 24;
             this.btnSubmitUser.Text = "Submit";
             this.btnSubmitUser.UseVisualStyleBackColor = true;
+            this.btnSubmitUser.Click += new System.EventHandler(this.btnSubmitUser_Click);
             // 
             // AddUsers
             // 
@@ -356,8 +323,6 @@
             this.Controls.Add(this.btnSubmitUser);
             this.Controls.Add(this.radioButtonFemaleUser);
             this.Controls.Add(this.radioButtonMaleUser);
-            this.Controls.Add(this.comboBoxPermission);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.comboBoxDesignation);
             this.Controls.Add(this.comboBoxProject);
             this.Controls.Add(this.dateTimeCreatedAtUser);
@@ -366,9 +331,7 @@
             this.Controls.Add(this.txtConfirmPass);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtAddressUser);
-            this.Controls.Add(this.label14);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.label13);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -385,6 +348,7 @@
             this.Controls.Add(this.label2);
             this.Name = "AddUsers";
             this.Text = "Users";
+            this.Load += new System.EventHandler(this.AddUsers_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -416,11 +380,7 @@
         private TextBox txtConfirmPass;
         private Label label9;
         private TextBox txtPhotoUser;
-        private Label label13;
-        private ComboBox comboBox1;
-        private Label label14;
         private ComboBox comboBoxDesignation;
-        private ComboBox comboBoxPermission;
         private Button btnLogOut;
         private Button btnRefresh;
         private Button btnBackAddNewUser;

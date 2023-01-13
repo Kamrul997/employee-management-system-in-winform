@@ -101,10 +101,16 @@
             // 
             // dataGridViewUser
             // 
+            this.dataGridViewUser.AllowUserToAddRows = false;
+            this.dataGridViewUser.AllowUserToDeleteRows = false;
+            this.dataGridViewUser.AllowUserToResizeColumns = false;
+            this.dataGridViewUser.AllowUserToResizeRows = false;
             this.dataGridViewUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewUser.Location = new System.Drawing.Point(16, 48);
             this.dataGridViewUser.Name = "dataGridViewUser";
+            this.dataGridViewUser.RowHeadersVisible = false;
             this.dataGridViewUser.RowTemplate.Height = 25;
+            this.dataGridViewUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewUser.Size = new System.Drawing.Size(696, 281);
             this.dataGridViewUser.TabIndex = 22;
             // 
@@ -133,6 +139,7 @@
             this.Controls.Add(this.label1);
             this.Name = "UserShow";
             this.Text = "UserShow";
+            this.Load += new System.EventHandler(this.UserShow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

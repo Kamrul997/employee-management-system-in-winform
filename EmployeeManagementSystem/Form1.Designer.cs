@@ -85,6 +85,7 @@
             this.LogonPassBox.PasswordChar = '*';
             this.LogonPassBox.Size = new System.Drawing.Size(322, 25);
             this.LogonPassBox.TabIndex = 1;
+            this.LogonPassBox.Text = "123123";
             // 
             // label2
             // 
@@ -103,6 +104,7 @@
             this.LoginEmailBox.Name = "LoginEmailBox";
             this.LoginEmailBox.Size = new System.Drawing.Size(322, 25);
             this.LoginEmailBox.TabIndex = 0;
+            this.LoginEmailBox.Text = "user1@gmail.com";
             // 
             // label1
             // 
@@ -122,7 +124,6 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

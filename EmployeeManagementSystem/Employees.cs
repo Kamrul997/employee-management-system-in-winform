@@ -32,9 +32,7 @@ namespace EmployeeManagementSystem
             int employeeID = 0;
             int TotalRow = dataGridViewEmployee.Rows.Count;
             for (int i = 0; i < TotalRow; i++)
-            {
-
-                
+            {                
                 DataGridViewRow gridr = dataGridViewEmployee.Rows[i];
                 if (gridr.Selected == true)
                 {

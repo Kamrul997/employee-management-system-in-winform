@@ -17,7 +17,7 @@ namespace EmployeeManagementSystem
         private void BtnLogin_Click(object sender, EventArgs e)
         {
 
-            /*IDbConnection db = new SqlConnection(Properties.Settings.Default.con1);
+            IDbConnection db = new SqlConnection(Properties.Settings.Default.con1);
             List<LoginUserDetails> myList = new List<LoginUserDetails>();
             db.Open();
             myList = db.Query<LoginUserDetails>("LoginIdSP", new { Email = LoginEmailBox.Text }, commandType: CommandType.StoredProcedure).ToList();
@@ -26,40 +26,30 @@ namespace EmployeeManagementSystem
                 MessageBox.Show("Input your login data");
                 return;
             }
-            else if(myList.Count == 0)
+            else if (myList.Count == 0)
             {
                 MessageBox.Show("Invalid Email or Password");
                 return;
             }
             string LogEmail = myList[0].Email.ToString();
             string LogPass = myList[0].uPassword.ToString();
-            
+
             if (LoginEmailBox.Text == LogEmail && LogonPassBox.Text == LogPass)
             {
                 this.Visible = false;
-                DashBoard dashBoard = new DashBoard();
-                dashBoard.Show();
+                DashBoard dashBoard1 = new DashBoard();
+                dashBoard1.Show();
                 LoginID.LoginUserID = myList[0].UserID;
             }
-            else 
+            else
             {
                 MessageBox.Show("Invalid Email or Password");
                 return;
-                
+
             }
-            db.Close();*/
-
-            this.Visible = false;
-            DashBoard dashBoard = new DashBoard();
-            dashBoard.Show();
+            db.Close();
 
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-           
-        }
-
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();

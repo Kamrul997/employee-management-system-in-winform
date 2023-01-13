@@ -26,13 +26,32 @@ namespace EmployeeManagementSystem
 
         private void btnDeleteUser_Click(object sender, EventArgs e)
         {
-
+            if (dataGridViewUser.Rows[0].Selected == true)
+            {
+                MessageBox.Show("You cannot delete this User");
+            }
+            else
+            {
+                DeleteData deleteData = new DeleteData();
+                deleteData.DeleteItems("DeleteUserSP", dataGridViewUser);
+                displayData.DatagridviewDisplay("ShowAllUsersSP", dataGridViewUser);
+            }            
         }
 
         private void btnEditUser_Click(object sender, EventArgs e)
         {
+            int UserID = 0;
+            int TotalRow = dataGridViewUser.Rows.Count;
+            for (int i = 0; i < TotalRow; i++)
+            {
+                DataGridViewRow gridr = dataGridViewUser.Rows[i];
+                if (gridr.Selected == true)
+                {
+                    UserID = Int32.Parse(gridr.Cells[0].FormattedValue.ToString());
+                }
+            }
             this.Visible = false;
-            UpdateUser updateUser = new UpdateUser();
+            UpdateUser updateUser = new UpdateUser(UserID);
             updateUser.Show();
         }
 
@@ -48,6 +67,11 @@ namespace EmployeeManagementSystem
             this.Visible = false;
             Form1 form1 = new Form1();
             form1.Show();
+        }
+        DisplayData displayData = new DisplayData();
+        private void UserShow_Load(object sender, EventArgs e)
+        {
+            displayData.DatagridviewDisplay("ShowAllUsersSP", dataGridViewUser);
         }
     }
     

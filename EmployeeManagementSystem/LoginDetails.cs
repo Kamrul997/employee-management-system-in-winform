@@ -11,8 +11,7 @@ namespace EmployeeManagementSystem
 {
     public class LoginID
     {
-        public static int LoginUserID { get; internal set; }
-        public static int llll { get; internal set; }
+        public static int LoginUserID { get;  set; }        
       
     }
     public class LoginUserDetails

@@ -59,6 +59,7 @@ namespace EmployeeManagementSystem
             }
             else
             {
+              
                 int projectId = 0;
                 string JoinDateValue = dateTimeJoinEmployee.Value.ToShortDateString();
                 string BirthDateValue = dateTimeBirthEmployee.Value.ToShortDateString();
@@ -86,7 +87,7 @@ namespace EmployeeManagementSystem
                         BirthDate = BirthDateValue,
                         JoinDate = JoinDateValue,
                         ResignDate = ResignDateValue,
-                        UserID = 100,
+                        UserID = LoginID.LoginUserID,
                         Gender = genderValue
                     }, commandType: CommandType.StoredProcedure).ToList();                
                 int LastEmpID = lastEmps[0].EmployeeID;
@@ -136,8 +137,7 @@ namespace EmployeeManagementSystem
             db.Close();
             ((ListBox)checkBoxProject).DataSource = ds;
             ((ListBox)checkBoxProject).DisplayMember = "ProjectName";
-            ((ListBox)checkBoxProject).ValueMember = "ProjectID";
-            
+            ((ListBox)checkBoxProject).ValueMember = "ProjectID";         
 
 
         }

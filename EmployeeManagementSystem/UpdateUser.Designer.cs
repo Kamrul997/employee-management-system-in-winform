@@ -34,23 +34,13 @@
             this.btnUpdateUser = new System.Windows.Forms.Button();
             this.radioButtonUpdateFemaleUser = new System.Windows.Forms.RadioButton();
             this.radioButtonUpdateMaleUser = new System.Windows.Forms.RadioButton();
-            this.comboBoxUpdatePermission = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBoxUpdateDesignation = new System.Windows.Forms.ComboBox();
             this.comboBoxProject = new System.Windows.Forms.ComboBox();
-            this.dateTimeCreatedAtUpdateUser = new System.Windows.Forms.DateTimePicker();
-            this.label10 = new System.Windows.Forms.Label();
             this.txtUpdatePhotoUser = new System.Windows.Forms.TextBox();
-            this.txtUpdateConfirmPass = new System.Windows.Forms.TextBox();
-            this.UpdatetxtPass = new System.Windows.Forms.TextBox();
             this.txtUpdateAddressUser = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtUpdateMobileNumberUser = new System.Windows.Forms.TextBox();
@@ -106,7 +96,7 @@
             // radioButtonUpdateFemaleUser
             // 
             this.radioButtonUpdateFemaleUser.AutoSize = true;
-            this.radioButtonUpdateFemaleUser.Location = new System.Drawing.Point(579, 205);
+            this.radioButtonUpdateFemaleUser.Location = new System.Drawing.Point(579, 109);
             this.radioButtonUpdateFemaleUser.Name = "radioButtonUpdateFemaleUser";
             this.radioButtonUpdateFemaleUser.Size = new System.Drawing.Size(63, 19);
             this.radioButtonUpdateFemaleUser.TabIndex = 54;
@@ -117,7 +107,7 @@
             // radioButtonUpdateMaleUser
             // 
             this.radioButtonUpdateMaleUser.AutoSize = true;
-            this.radioButtonUpdateMaleUser.Location = new System.Drawing.Point(487, 205);
+            this.radioButtonUpdateMaleUser.Location = new System.Drawing.Point(487, 109);
             this.radioButtonUpdateMaleUser.Name = "radioButtonUpdateMaleUser";
             this.radioButtonUpdateMaleUser.Size = new System.Drawing.Size(51, 19);
             this.radioButtonUpdateMaleUser.TabIndex = 53;
@@ -125,25 +115,13 @@
             this.radioButtonUpdateMaleUser.Text = "Male";
             this.radioButtonUpdateMaleUser.UseVisualStyleBackColor = true;
             // 
-            // comboBoxUpdatePermission
-            // 
-            this.comboBoxUpdatePermission.FormattingEnabled = true;
-            this.comboBoxUpdatePermission.Location = new System.Drawing.Point(487, 105);
-            this.comboBoxUpdatePermission.Name = "comboBoxUpdatePermission";
-            this.comboBoxUpdatePermission.Size = new System.Drawing.Size(211, 23);
-            this.comboBoxUpdatePermission.TabIndex = 51;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(487, 105);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(167, 23);
-            this.comboBox1.TabIndex = 50;
-            // 
             // comboBoxUpdateDesignation
             // 
             this.comboBoxUpdateDesignation.FormattingEnabled = true;
+            this.comboBoxUpdateDesignation.Items.AddRange(new object[] {
+            "2nd Admin",
+            "frist officer",
+            "2nd officer"});
             this.comboBoxUpdateDesignation.Location = new System.Drawing.Point(487, 61);
             this.comboBoxUpdateDesignation.Name = "comboBoxUpdateDesignation";
             this.comboBoxUpdateDesignation.Size = new System.Drawing.Size(211, 23);
@@ -157,42 +135,12 @@
             this.comboBoxProject.Size = new System.Drawing.Size(167, 23);
             this.comboBoxProject.TabIndex = 49;
             // 
-            // dateTimeCreatedAtUpdateUser
-            // 
-            this.dateTimeCreatedAtUpdateUser.Location = new System.Drawing.Point(487, 151);
-            this.dateTimeCreatedAtUpdateUser.Name = "dateTimeCreatedAtUpdateUser";
-            this.dateTimeCreatedAtUpdateUser.Size = new System.Drawing.Size(211, 23);
-            this.dateTimeCreatedAtUpdateUser.TabIndex = 48;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(487, 133);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(63, 15);
-            this.label10.TabIndex = 35;
-            this.label10.Text = "Created At";
-            // 
             // txtUpdatePhotoUser
             // 
-            this.txtUpdatePhotoUser.Location = new System.Drawing.Point(250, 204);
+            this.txtUpdatePhotoUser.Location = new System.Drawing.Point(250, 151);
             this.txtUpdatePhotoUser.Name = "txtUpdatePhotoUser";
             this.txtUpdatePhotoUser.Size = new System.Drawing.Size(211, 23);
             this.txtUpdatePhotoUser.TabIndex = 46;
-            // 
-            // txtUpdateConfirmPass
-            // 
-            this.txtUpdateConfirmPass.Location = new System.Drawing.Point(250, 151);
-            this.txtUpdateConfirmPass.Name = "txtUpdateConfirmPass";
-            this.txtUpdateConfirmPass.Size = new System.Drawing.Size(211, 23);
-            this.txtUpdateConfirmPass.TabIndex = 44;
-            // 
-            // UpdatetxtPass
-            // 
-            this.UpdatetxtPass.Location = new System.Drawing.Point(250, 105);
-            this.UpdatetxtPass.Name = "UpdatetxtPass";
-            this.UpdatetxtPass.Size = new System.Drawing.Size(211, 23);
-            this.UpdatetxtPass.TabIndex = 45;
             // 
             // txtUpdateAddressUser
             // 
@@ -201,32 +149,14 @@
             this.txtUpdateAddressUser.Size = new System.Drawing.Size(211, 23);
             this.txtUpdateAddressUser.TabIndex = 47;
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(487, 87);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(65, 15);
-            this.label14.TabIndex = 39;
-            this.label14.Text = "Permission";
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(487, 183);
+            this.label12.Location = new System.Drawing.Point(487, 87);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(45, 15);
             this.label12.TabIndex = 36;
             this.label12.Text = "Gender";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(487, 87);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(70, 15);
-            this.label13.TabIndex = 38;
-            this.label13.Text = "Designation";
             // 
             // label11
             // 
@@ -240,29 +170,11 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(250, 186);
+            this.label9.Location = new System.Drawing.Point(250, 133);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(39, 15);
             this.label9.TabIndex = 43;
             this.label9.Text = "Photo";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(250, 133);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(104, 15);
-            this.label8.TabIndex = 42;
-            this.label8.Text = "Confirm Password";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(250, 87);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 15);
-            this.label6.TabIndex = 41;
-            this.label6.Text = "Password";
             // 
             // label7
             // 
@@ -285,15 +197,15 @@
             // 
             // txtUpdateMobileNumberUser
             // 
-            this.txtUpdateMobileNumberUser.Location = new System.Drawing.Point(12, 264);
+            this.txtUpdateMobileNumberUser.Location = new System.Drawing.Point(250, 105);
             this.txtUpdateMobileNumberUser.Name = "txtUpdateMobileNumberUser";
-            this.txtUpdateMobileNumberUser.Size = new System.Drawing.Size(223, 23);
+            this.txtUpdateMobileNumberUser.Size = new System.Drawing.Size(211, 23);
             this.txtUpdateMobileNumberUser.TabIndex = 30;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 242);
+            this.label5.Location = new System.Drawing.Point(250, 87);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(91, 15);
             this.label5.TabIndex = 26;
@@ -374,23 +286,13 @@
             this.Controls.Add(this.btnUpdateUser);
             this.Controls.Add(this.radioButtonUpdateFemaleUser);
             this.Controls.Add(this.radioButtonUpdateMaleUser);
-            this.Controls.Add(this.comboBoxUpdatePermission);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.comboBoxUpdateDesignation);
             this.Controls.Add(this.comboBoxProject);
-            this.Controls.Add(this.dateTimeCreatedAtUpdateUser);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.txtUpdatePhotoUser);
-            this.Controls.Add(this.txtUpdateConfirmPass);
-            this.Controls.Add(this.UpdatetxtPass);
             this.Controls.Add(this.txtUpdateAddressUser);
-            this.Controls.Add(this.label14);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.label13);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtUpdateMobileNumberUser);
@@ -419,23 +321,13 @@
         private Button btnUpdateUser;
         private RadioButton radioButtonUpdateFemaleUser;
         private RadioButton radioButtonUpdateMaleUser;
-        private ComboBox comboBoxUpdatePermission;
-        private ComboBox comboBox1;
         private ComboBox comboBoxUpdateDesignation;
         private ComboBox comboBoxProject;
-        private DateTimePicker dateTimeCreatedAtUpdateUser;
-        private Label label10;
         private TextBox txtUpdatePhotoUser;
-        private TextBox txtUpdateConfirmPass;
-        private TextBox UpdatetxtPass;
         private TextBox txtUpdateAddressUser;
-        private Label label14;
         private Label label12;
-        private Label label13;
         private Label label11;
         private Label label9;
-        private Label label8;
-        private Label label6;
         private Label label7;
         private Label label1;
         private TextBox txtUpdateMobileNumberUser;
